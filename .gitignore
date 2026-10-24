@@ -1,0 +1,16 @@
+# 本地私密配置（含密钥），首次用 `python bot.py init` 生成
+config.json
+
+# 本地运行产物：个人日报、点赞、去重库等私有数据一律不入公开仓库；
+# CI 的归档走独立目录 archive/ 与 ci-state/（见 .github/workflows/daily.yml），
+# 与本地 output/、data/ 路径互不冲突。
+output/
+data/
+
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# PyInstaller 构建产物（exe 本身不入库，用 build-exe.cmd 随时重建）
+build/
+dist/

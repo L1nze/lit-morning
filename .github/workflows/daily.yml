@@ -1,0 +1,126 @@
+name: daily-digest
+
+# 触发时间特意错开整点/半点：GitHub Actions 的 cron 在整点最拥挤，
+# 高峰期任务可能被延迟甚至丢弃（头部同类项目的实测经验），错峰几分钟显著更稳。
+on:
+  schedule:
+    - cron: "37 0 * * *"   # 每天 00:37 UTC = 北京时间 08:37
+  workflow_dispatch:        # 支持手动触发
+
+# 串行排队：定时与手动触发撞车时，同一时刻只允许一个实例在跑，
+# 避免 seen.db 去重写入与 git push 的并发竞态；后来的排队等待，不取消进行中的。
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+permissions:
+  contents: write           # 需要把日报归档提交回仓库
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    # 超时上限：网络/LLM 卡死时及时失败，不烧满 runner 默认 6 小时配额
+    timeout-minutes: 15
+    outputs:
+      # 告诉下游 pages job：当天是否被幂等 guard 跳过（用于决定要不要发布 Pages）
+      skipped: ${{ steps.guard.outputs.skipped }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # 幂等 guard：当天日报已存在（如手动跑过一次）就不再重复抓取/推送/归档。
+      # CI 的归档在 archive/ 目录（本地 output/、data/ 已 gitignore，
+      # 个人日报与去重库永远不进公开仓库，CI 状态走自己的目录，互不冲突）
+      - name: 幂等 guard（当天已生成过则跳过）
+        id: guard
+        run: |
+          if [ -f "archive/digest-$(date -u +%F).md" ]; then
+            echo "SKIP=true" >> "$GITHUB_ENV"        # 供后续步骤的 if: env.SKIP 使用
+            echo "skipped=true" >> "$GITHUB_OUTPUT"  # job 级输出，供 pages job 判断
+            echo "::notice::今日日报已存在（archive/digest-$(date -u +%F).md），跳过生成与归档"
+          else
+            echo "skipped=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 恢复 CI 去重状态（上一轮归档的 seen.db / 缓存）
+        if: env.SKIP != 'true'
+        run: |
+          mkdir -p data
+          for f in seen.db journal_rank_cache.json summary_cache.json embed_cache.json; do
+            cp -f "ci-state/$f" "data/$f" 2>/dev/null || true
+          done
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 生成今日早报
+        if: env.SKIP != 'true'   # guard 命中时跳过（guard 未设置 SKIP 时该值为空串，条件为真）
+        env:
+          LITZB_SERVERCHAN_SENDKEY: ${{ secrets.LITZB_SERVERCHAN_SENDKEY }}
+          LITZB_PUSHPLUS_TOKEN: ${{ secrets.LITZB_PUSHPLUS_TOKEN }}
+          LITZB_LLM_ACTIVE: ${{ secrets.LITZB_LLM_ACTIVE }}
+          LITZB_LLM_API_KEY: ${{ secrets.LITZB_LLM_API_KEY }}
+          LITZB_LLM_MODEL: ${{ secrets.LITZB_LLM_MODEL }}
+          LITZB_OPENALEX_API_KEY: ${{ secrets.LITZB_OPENALEX_API_KEY }}
+          LITZB_ELSEVIER_API_KEY: ${{ secrets.LITZB_ELSEVIER_API_KEY }}
+          LITZB_RANK_PROVIDER: ${{ secrets.LITZB_RANK_PROVIDER }}
+          LITZB_EASYSCHOLAR_KEY: ${{ secrets.LITZB_EASYSCHOLAR_KEY }}
+          LITZB_ONESCHOLAR_KEY: ${{ secrets.LITZB_ONESCHOLAR_KEY }}
+        run: python bot.py today
+
+      - name: 归档到仓库（CI 专属目录 archive/ + ci-state/）
+        if: env.SKIP != 'true'   # guard 命中时跳过
+        run: |
+          git config user.name  "lit-zaobao-bot"
+          git config user.email "bot@users.noreply.github.com"
+          mkdir -p archive ci-state
+          cp -f output/digest-*.* output/index.html output/feed.xml archive/ 2>/dev/null || true
+          for f in seen.db journal_rank_cache.json summary_cache.json embed_cache.json; do
+            cp -f "data/$f" "ci-state/$f" 2>/dev/null || true
+          done
+          git add archive ci-state || true
+          if git diff --cached --quiet; then
+            echo "今日无新内容，跳过提交"
+          else
+            git commit -m "digest: $(date -u +%F) $(date -u +%T) UTC"
+            # 竞态兜底：push 前先 rebase 拉平远端新提交（另一实例或人工刚推过）；
+            # 若 rebase 冲突则立即中止（避免卡在中途状态），让随后的 git push 失败、
+            # job 变红暴露问题——保留失败而非吞掉，便于发现异常。
+            git pull --rebase origin "${GITHUB_REF_NAME}" || git rebase --abort || true
+            git push
+          fi
+
+  # 静态站归档：把 archive/（全部历史日报）发布到 GitHub Pages。
+  # 首次使用需在仓库 Settings → Pages 把 Source 设为 "GitHub Actions"。
+  pages:
+    needs: digest
+    # 条件设计（两种方案权衡后选精确版 A）：
+    #   A（采用）：digest 真正执行且成功、且未被 guard 跳过时才发布。
+    #     guard 跳过 = 当天 archive/ 内容此前已生成并归档过，重复部署浪费 Pages 配额；
+    #     若首次启用 Pages 当天恰好被跳过，次日定时跑通后自动补上，最多晚一天。
+    #   B（弃用）：if: always() && !failure() && !cancelled() —— skip 时也能重发存量
+    #     archive/，首次启用更即时，但每次触发都占一次部署，日常浪费大于收益。
+    if: needs.digest.result == 'success' && needs.digest.outputs.skipped != 'true'
+    runs-on: ubuntu-latest
+    # Pages 部署同样限时，防止卡死烧配额
+    timeout-minutes: 10
+    # 覆盖顶层 permissions：Pages 部署需要 pages 写权限 + OIDC 的 id-token，
+    # 并把 contents 收窄回只读（最小权限原则，发布静态站不需要写仓库）
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: archive           # CI 归档目录整体作为静态站点内容
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

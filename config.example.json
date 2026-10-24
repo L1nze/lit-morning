@@ -1,0 +1,110 @@
+{
+  "keywords": {
+    "topic_terms": [
+      "large language model",
+      "llm",
+      "language model",
+      "foundation model"
+    ],
+    "method_terms": [
+      "agent",
+      "multi-agent",
+      "tool use",
+      "reasoning",
+      "planning",
+      "reflection"
+    ],
+    "bonus_terms": [
+      "benchmark",
+      "evaluation",
+      "fine-tuning",
+      "rlhf",
+      "hallucination",
+      "chain-of-thought",
+      "memory",
+      "multimodal"
+    ],
+    "exclude_terms": [
+      "survey",
+      "review"
+    ]
+  },
+  "days_lookback": 3,
+  "top_n": 12,
+  "min_score": 5,
+  "require_topic_term": true,
+  "require_method_term": false,
+  "research_focus": "大语言模型与智能体（LLM Agents）——示例方向，请在 config.json 改成你自己的",
+  "app_tagline": "论文日报 · 每天只推你方向的新文献",
+  "journal_tiers": {},
+  "min_journal_tier": 0,
+  "journal_rank": {
+    "provider": "easyscholar",
+    "easyscholar_key": "",
+    "onescholar_key": "",
+    "cache_days": 30
+  },
+  "semantic": {
+    "enabled": true,
+    "rescue_top": 2
+  },
+  "sources": {
+    "arxiv": true,
+    "openalex": true,
+    "crossref": true,
+    "scopus": true
+  },
+  "openalex_email": "",
+  "openalex_api_key": "",
+  "crossref_email": "",
+  "elsevier_api_key": "",
+  "translate": {
+    "engine": "llm",
+    "deepl_api_key": "",
+    "baidu_appid": "",
+    "baidu_key": "",
+    "youdao_appkey": "",
+    "youdao_secret": "",
+    "mymemory_email": ""
+  },
+  "llm": {
+    "active": "zhipu",
+    "embedding_model": "",
+    "system_prompt": "",
+    "providers": {
+      "zhipu": {
+        "api_key": "",
+        "model": "glm-4-flash"
+      },
+      "deepseek": {
+        "api_key": "",
+        "model": "deepseek-chat"
+      },
+      "custom": {
+        "name": "自定义",
+        "base_url": "",
+        "api_key": "",
+        "model": ""
+      }
+    }
+  },
+  "push": {
+    "provider": "serverchan",
+    "fallback_provider": "",
+    "serverchan_sendkey": "",
+    "pushplus_token": "",
+    "wecom_key": "",
+    "wxpusher_app_token": "",
+    "wxpusher_uid": "",
+    "smtp_host": "",
+    "smtp_port": "",
+    "smtp_user": "",
+    "smtp_pass": "",
+    "smtp_to": "",
+    "enabled": true
+  },
+  "output_dir": "output",
+  "site_url": "",
+  "data_dir": "data",
+  "language": "zh"
+}
