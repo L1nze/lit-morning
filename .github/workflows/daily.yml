@@ -115,6 +115,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 关键：默认 checkout 取「触发本次运行」的旧提交，看不到 digest job
+          # 刚 push 的新提交（archive/ 只存在于新提交里），必须显式取分支最新头
+          ref: ${{ github.ref_name }}
 
       - uses: actions/configure-pages@v5
 
