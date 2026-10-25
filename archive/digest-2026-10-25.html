@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文献早报 2026-10-25</title><style>
+:root { --bg:#f6f7f9; --card:#ffffff; --text:#1f2328; --muted:#6a737d;
+        --accent:#0969da; --tag:#ddf4e4; --tagtext:#116329; --warn:#fff8c5; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0d1117; --card:#161b22; --text:#e6edf3; --muted:#8b949e;
+          --accent:#58a6ff; --tag:#12261e; --tagtext:#7ee787; --warn:#292216; }
+  mark { background:#5c4a00; color:#ffe89e; } }
+* { box-sizing: border-box; }
+body { margin:0; padding:24px 12px; background:var(--bg); color:var(--text);
+       font-family:-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+       line-height:1.65; }
+.wrap { max-width:820px; margin:0 auto; }
+h1 { font-size:1.35em; margin:0 0 4px; }
+.sub { color:var(--muted); font-size:.9em; margin-bottom:16px; }
+.overview { background:var(--card); border:1px solid var(--muted); border-radius:10px;
+            padding:12px 16px; margin-bottom:18px; font-size:.95em; }
+.paper { background:var(--card); border-radius:10px; padding:16px 18px; margin-bottom:14px;
+         box-shadow:0 1px 2px rgba(0,0,0,.06); }
+.paper h2 { font-size:1.02em; margin:0 0 6px; }
+.paper h2 a { color:var(--accent); text-decoration:none; }
+.paper h2 a:hover { text-decoration:underline; }
+.meta { color:var(--muted); font-size:.82em; margin-bottom:8px; }
+.hl { border-left:3px solid var(--accent); padding-left:10px; margin:8px 0;
+      font-size:.92em; }
+.tags { margin-top:8px; }
+.tag { display:inline-block; background:var(--tag); color:var(--tagtext);
+       border-radius:999px; padding:1px 10px; font-size:.75em; margin:2px 4px 2px 0; }
+.tier { display:inline-block; border:1px solid var(--accent); color:var(--accent);
+        border-radius:6px; padding:0 8px; font-size:.78em; margin-right:6px; }
+.tier1 { background:transparent; font-weight:600; }
+.ranks { margin:-2px 0 8px; }
+details { margin-top:8px; }
+summary { cursor:pointer; color:var(--muted); font-size:.85em; }
+.abs { font-size:.88em; color:var(--muted); }
+.warn { background:var(--warn); border-radius:8px; padding:8px 12px;
+        font-size:.82em; color:var(--muted); }
+mark { background:#ffe89e; color:inherit; border-radius:3px; padding:0 2px; }
+footer { text-align:center; color:var(--muted); font-size:.78em; margin-top:24px; }
+@media print { .paper { box-shadow:none; border:1px solid #ddd; } }
+</style></head>
+<body><div class="wrap">
+<h1>📚 文献早报 2026-10-25</h1>
+<div class="sub">论文日报 · 每天只推你方向的新文献 · 共 12 篇 · lit-zaobao 生成</div>
+<div class="overview">（未配置 LLM，以下为规则生成的摘要；用 `python bot.py models` 查看可选服务商并填 key）</div>
+
+
+<article class="paper">
+  <h2>1. <a href="https://arxiv.org/abs/2610.31029v1" target="_blank" rel="noopener">AERIAL: Mission-Aware <mark>LLM</mark> Selection for Language-Driven UAV Control in Flying Networks</a></h2>
+  <div class="meta">arXiv · 2026-10-22 · 匹配分 13 · Diana Nunes 等 5 人</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, reasoning, benchmark</div>
+  <div class="abs">Unmanned Aerial Vehicles (UAVs) in Flying Networks (FNs) increasingly require mechanisms to translate high-level natural language objectives into executable missions. Although Large Language Models (LLMs) have demonstrated the feasibility of language-driven UAV control, existing approaches typically rely on static model configurations and overlook mission-aware performance variability.</div>
+  <details><summary>英文摘要</summary><p class="abs">Unmanned Aerial Vehicles (UAVs) in Flying Networks (FNs) increasingly require mechanisms to translate high-level natural language objectives into executable missions. Although <mark>Large Language Models</mark> (<mark>LLMs</mark>) have demonstrated the feasibility of language-driven UAV control, existing approaches typically rely on static model configurations and overlook mission-aware performance variability. This paper presents AERIAL, a <mark>benchmark</mark>-driven framework for adaptive <mark>LLM</mark> selection in hybrid edge-cloud UAV control. AERIAL separates systematic model benchmarking from mission execution, deriving empirical scenario-model mappings and applying them at runtime for mission-aware selection. <mark>Evaluation</mark> across 720 automated simulation runs spanning navigation, spatial <mark>reasoning</mark>, and algorithm invocation revealed significant performance variability depending on scenario-model pairing. A case study integrating AERIAL with a FNs placement algorithm further validated the framework&#x27;s ability to interface with domain-specific optimization modules through natural language. These results validate the effectiveness of AERIAL&#x27;s adaptive model selection in improving reliability and operational robustness for autonomous UAV control in FNs.</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">reasoning</span><span class="tag">benchmark</span><span class="tag">evaluation</span></div>
+</article>
+<article class="paper">
+  <h2>2. <a href="https://arxiv.org/abs/2610.30947v1" target="_blank" rel="noopener">RetiJev: Fast and Source-Grounded Ophthalmic Decision Models</a></h2>
+  <div class="meta">arXiv · 2026-10-22 · 匹配分 13 · Bo Liu 等 5 人</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, reasoning, benchmark</div>
+  <div class="abs">Ophthalmic clinical decision support requires fast, accurate, and privacy-preserving inference, yet autoregressive large language models (LLMs) incur substantial latency and computational overhead for decisions among predefined actions. We therefore investigate a decision-oriented alternative to generative reasoning.</div>
+  <details><summary>英文摘要</summary><p class="abs">Ophthalmic clinical decision support requires fast, accurate, and privacy-preserving inference, yet autoregressive <mark>large language models</mark> (<mark>LLMs</mark>) incur substantial latency and computational overhead for decisions among predefined actions. We therefore investigate a decision-oriented alternative to generative <mark>reasoning</mark>. Specifically, we first introduce RetiJev-Data, a source-grounded ophthalmology corpus comprising 78,158 clinical-decision and diagnosis questions derived from articles in PubMed Central and a MeSH vocabulary covering 531 eye diseases, and 50,074 guideline-grading questions spanning 11 grading systems, along with a 24,662-question <mark>evaluation</mark> <mark>benchmark</mark>. Based on this, we develop RetiJev, a family of 0.8B-9B decision models that directly score candidate answers without autoregressive decoding. Across all model sizes, RetiJev outperforms both a 27B <mark>LLM</mark> and the commercial Jev 1.13 decision model on guideline grading by 10.4-23.0 points. RetiJev-9B further achieves the highest accuracy on clinical decisions, improving over both baselines by 5.4-6.5 points while matching them on diagnosis. It answers a case in 158 ms on one GPU, 3.5x faster than <mark>LLM</mark> generation and 470x faster than <mark>reasoning</mark>. Models are released at https://github.com/Awenbocc/RetiJev.</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">reasoning</span><span class="tag">benchmark</span><span class="tag">evaluation</span></div>
+</article>
+<article class="paper">
+  <h2>3. <a href="https://arxiv.org/abs/2610.30791v1" target="_blank" rel="noopener">Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in <mark>LLM</mark> Serving</a></h2>
+  <div class="meta">arXiv · 2026-10-22 · 匹配分 13 · Maharani A. P. Irawan 等 7 人</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, agent, evaluation</div>
+  <div class="abs">KV caching reduces the serving cost of large language models (LLMs), but the growing KV cache footprint is increasingly exceeds GPU and host-memory capacity. Therefore, people use SSD to expand the KV cache storage capacity with high I/O bandwidth.</div>
+  <details><summary>英文摘要</summary><p class="abs">KV caching reduces the serving cost of <mark>large language models</mark> (<mark>LLMs</mark>), but the growing KV cache footprint is increasingly exceeds GPU and host-<mark>memory</mark> capacity. Therefore, people use SSD to expand the KV cache storage capacity with high I/O bandwidth. However, in production <mark>LLM</mark> workload, such as multi-round conversation and <mark>LLM</mark> <mark>agents</mark>, the total amount of KV cache writes significantly exceeds SSD capacity, shortening SSD lifetime from years to months. To improve SSD lifetime, a natural solution is to reduce the KV cache writes by gating the KV cache writes via historical access patterns. However, that significantly lowers the KV cache hit rate (and increase the <mark>LLM</mark> serving cost) since KV caches from different attention types might have identical historical access pattern but different future access patterns. Our insight is that, to reduce KV cache writes without hurting KV cache hit rate, one need to not only consider the access pattern, but also application-level information such as the attention type of KV cache. Leveraging this observation, we propose Gandalf , the first SSD KV cache offloading system with SSD life time awareness. Gandalf prioritize the admission of full-attention KV cache into SSD over the cache generated by other types of attention, which significantly increases SSD lifetime without sacrificing cache hit rate. Our <mark>evaluation</mark> shows that Gandalf extends the SSD lifetime by 7.3X on average, while having negligible impact on cache hit rate across multiple workl</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">evaluation</span><span class="tag">memory</span></div>
+</article>
+<article class="paper">
+  <h2>4. <a href="https://arxiv.org/abs/2610.30675v1" target="_blank" rel="noopener">OneLatent: Latent <mark>Reasoning</mark> for Efficient Foundation Recommendation Models</a></h2>
+  <div class="meta">arXiv · 2026-10-22 · 匹配分 13 · Hao Jiang 等 13 人</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, reasoning, benchmark</div>
+  <div class="abs">Large language models (LLMs) have demonstrated strong reasoning capabilities, motivating their use as the backbone of foundation recommendation models (FRMs). Existing methods enhance recommendations through explicit Chain-of-Thought (CoT) reasoning under a Think-then-Answer paradigm.</div>
+  <details><summary>英文摘要</summary><p class="abs"><mark>Large language models</mark> (<mark>LLMs</mark>) have demonstrated strong <mark>reasoning</mark> capabilities, motivating their use as the backbone of foundation recommendation models (FRMs). Existing methods enhance recommendations through explicit <mark>Chain-of-Thought</mark> (CoT) <mark>reasoning</mark> under a Think-then-Answer paradigm. However, explicit CoT incurs substantial inference overhead by generating lengthy <mark>reasoning</mark> traces and relies on manually designed templates that struggle to capture diverse, dynamic user interests. We propose OneLatent, an efficient latent <mark>reasoning</mark> framework that compresses explicit <mark>reasoning</mark> traces into several learnable latent tokens, enabling Latent-Reason-then-Answer inference without generating verbose traces. OneLatent first introduces Multi-View Adaptive CoT (MV-ACoT), which creates diverse, high-quality teacher-generated supervision by exploring user interests from multiple perspectives and automatically adapting <mark>reasoning</mark> complexity to each instance. Building on pretrained FRMs, it then uses a three-stage latent-token alignment paradigm to progressively internalize CoT traces into learnable latent tokens. Finally, a multistage curriculum-based post-training strategy activates latent-token <mark>reasoning</mark> for downstream recommendation tasks. Experiments on an industrial-scale Kuaishou dataset and the public Kuaishou <mark>LLM</mark>-Rec <mark>benchmark</mark> show that OneLatent consistently outperforms explicit CoT-based methods and traditional baselines. Compared with the Think and No-Think variants of FRMs, OneLat</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">reasoning</span><span class="tag">benchmark</span><span class="tag">chain-of-thought</span></div>
+</article>
+<article class="paper">
+  <h2>5. <a href="https://doi.org/10.26434/chemrxiv.15005228/v2" target="_blank" rel="noopener">GVIM 2.0: A <mark>Multi-Agent</mark> Research System for Chemistry and Materials Science</a></h2>
+  <div class="meta">OpenAlex · 2026-10-22 · 匹配分 13 · Kangyong Ma</div>
+  
+  <div class="hl">⚡ 命中: large language model, language model, agent, multi-agent, planning</div>
+  <div class="abs">Large language models are increasingly used as natural-language interfaces for chemistry and materials research, but their utility in scientific workflows depends on their ability to connect user requests with executable tools, structured data handling, and verifiable outputs. Here, we present GVIM 2.0, a multi-agent research system designed to support computational and informatics workflows in ch…</div>
+  <details><summary>英文摘要</summary><p class="abs"><mark>Large language models</mark> are increasingly used as natural-language interfaces for chemistry and materials research, but their utility in scientific workflows depends on their ability to connect user requests with executable tools, structured data handling, and verifiable outputs. Here, we present GVIM 2.0, a <mark>multi-agent</mark> research system designed to support computational and informatics workflows in chemistry and materials science. GVIM 2.0 integrates language-model-based task <mark>planning</mark> with domain-specific Skills, packagebacked computational tools, sandboxed execution, and artifact generation. On a 400-question public <mark>benchmark</mark> suite spanning ChemBench, MaScQA, and ChemLLMBench, the complete GVIM 2.0 workflow answered 325/400 questions correctly, achieving an accuracy of 81.25%, compared with 285/400 questions and 71.25% accuracy for a same-base API-only baseline. We further evaluated GVIM 2.0 on task-native workflows covering molecular solubility prediction, steel yield-strength prediction, reaction-table extraction, MS/MS spectral retrieval, chemical entity extraction, retrospective BACE inhibitor prioritization, Matbench experimental band-gap modelling, and temporal external validation of BACE1 activity prediction. These workflows generated inspectable outputs, including prediction files, metrics, figures, and reports. The results show that GVIM 2.0 can organize reproducible data-to-result workflows for selected chemistry and materials informatics tasks, providing a practical f</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">multi-agent</span><span class="tag">planning</span><span class="tag">benchmark</span></div>
+</article>
+<article class="paper">
+  <h2>6. <a href="https://doi.org/10.22214/ijraset.2026.85186" target="_blank" rel="noopener">Secure <mark>Multi-Agent</mark> Collaboration Using <mark>Large Language Models</mark></a></h2>
+  <div class="meta">OpenAlex · 2026-10-22 · 匹配分 13 · Khaja Afrazuddin</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, agent, multi-agent</div>
+  <div class="abs">As Large Language Models have emerged and become increasingly significant, the way to develop smart multi-agent systems has been transformed, enabling them to communicate, collaborate and decision more efficiently. These systems rely on agents working independently which need to effectively and safely coordinate their actions, to maintain reliability in messy realworld environments.</div>
+  <details><summary>英文摘要</summary><p class="abs">As <mark>Large Language Models</mark> have emerged and become increasingly significant, the way to develop smart <mark>multi-agent</mark> systems has been transformed, enabling them to communicate, collaborate and decision more efficiently. These systems rely on <mark>agents</mark> working independently which need to effectively and safely coordinate their actions, to maintain reliability in messy realworld environments. However, bringing <mark>LLMs</mark> into the mix introduces new risks like data leaks, trickery from bad actors, and trust issues. This paper breaks down a full plan for keeping <mark>multi-agent</mark> teamwork secure when using <mark>LLMs</mark>. We look at everything from how they are built and the rules they use to communicate to the safety tools used to stop attacks. We also talk about where this is being used now, the hurdles we still face, and where the tech is headed for building secure AI ecosystems</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">multi-agent</span></div>
+</article>
+<article class="paper">
+  <h2>7. <a href="https://arxiv.org/abs/2610.30488v1" target="_blank" rel="noopener">From Single-Actor Environments to Multi-Actor Event Worlds: Can <mark>LLMs</mark> Be Event World Models?</a></h2>
+  <div class="meta">arXiv · 2026-10-21 · 匹配分 13 · Juntong Ni 等 5 人</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, agent, benchmark</div>
+  <div class="abs">World models help agents assess the consequences of their actions before acting. Many real systems, however, involve multiple actors who make their own decisions, can evolve even when the agent takes no action, and are only partially observed through event logs.</div>
+  <details><summary>英文摘要</summary><p class="abs">World models help <mark>agents</mark> assess the consequences of their actions before acting. Many real systems, however, involve multiple actors who make their own decisions, can evolve even when the <mark>agent</mark> takes no action, and are only partially observed through event logs. We formalize these systems as event worlds and ask whether <mark>large language models</mark> can predict future observations from the log and the <mark>agent</mark>&#x27;s proposed actions. We build complementary <mark>benchmarks</mark> from human Diplomacy games and real Polymarket trades. Our hierarchical framework compares prediction with and without other actors&#x27; actions, then tests multi-step rollouts, predictions for actions never taken, and usefulness to <mark>agents</mark>. <mark>Fine-tuning</mark> and more data improve prediction when all actors&#x27; recorded actions are given. With only the <mark>agent</mark>&#x27;s action, models struggle when other actors strongly affect the outcome, and larger models and longer histories help little. This gap also limits multi-step prediction and <mark>agent</mark> decisions, with models overestimating plan success. Yet imagined experience and initialization from world models can still improve policy learning. Anticipating other actors&#x27; actions remains a central challenge for event world modeling.</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">benchmark</span><span class="tag">fine-tuning</span></div>
+</article>
+<article class="paper">
+  <h2>8. <a href="https://arxiv.org/abs/2610.30435v1" target="_blank" rel="noopener">Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented <mark>Large Language Models</mark></a></h2>
+  <div class="meta">arXiv · 2026-10-21 · 匹配分 13 · Taewhoo Lee 等 9 人</div>
+  
+  <div class="hl">⚡ 命中: large language model, language model, agent, multi-agent, reasoning</div>
+  <div class="abs">Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information. However, existing search agents often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated reasoning and prematurely terminated search.</div>
+  <details><summary>英文摘要</summary><p class="abs">Recent advances in search <mark>agents</mark> have enabled <mark>large language models</mark> to tackle complex tasks by retrieving and synthesizing external information. However, existing search <mark>agents</mark> often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated <mark>reasoning</mark> and prematurely terminated search. To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time. SARL achieves this through a dual reward design that captures the corrective effect of each assessment while penalizing excessive reliance on it, jointly encouraging effective and efficient search trajectories. Under this setup, SARL achieves a 24.3% relative improvement over the strongest baseline, with average gains of 35.9% on multi-hop <mark>reasoning</mark> and 27.9% on deep research <mark>benchmarks</mark> against the strongest per-<mark>benchmark</mark> baselines. SARL further surpasses methods built on auxiliary supervision or <mark>multi-agent</mark> coordination, despite operating as a standalone RL framework with no inference-time scaffolding. Beyond final performance, SARL maintains training stability under extended search horizons, a regime where existing methods consistently degrade, enabling sustained gains as task complexity grows.</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">multi-agent</span><span class="tag">reasoning</span><span class="tag">benchmark</span></div>
+</article>
+<article class="paper">
+  <h2>9. <a href="https://doi.org/10.1016/j.aei.2026.105209" target="_blank" rel="noopener"><mark>LLM</mark>-BEM-engineer: a <mark>large language model</mark>-based <mark>multi-agent</mark> AI engineer for automated building energy modeling and analysis</a></h2>
+  <div class="meta">期刊·Advanced Engineering Informatics · 2026-09-06 · 匹配分 13 · Jiang Gang &amp; Chen Jianli</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, agent, multi-agent</div>
+  <div class="abs">(该源未提供摘要，点击标题查看原文)</div>
+  
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">multi-agent</span></div>
+</article>
+<article class="paper">
+  <h2>10. <a href="https://doi.org/10.5281/zenodo.23591941" target="_blank" rel="noopener">TeacherScript: An <mark>Agent</mark> for Teacher-Style Handwriting Imitation and Autonomous Educational Task Execution Across Digital and Physical Environments</a></h2>
+  <div class="meta">OpenAlex · 2026-10-23 · 匹配分 12 · Jincheng Zhang</div>
+  
+  <div class="hl">⚡ 命中: large language model, language model, agent, reflection, evaluation</div>
+  <div class="abs">Teachers and teacher-education students routinely prepare lesson plans, instructional materials, classroom activities, assessment documents, teaching reflections, and other educational artifacts. Although large language models can generate educational content, conventional systems generally treat content generation, personal handwriting style, document layout, and physical writing as separate prob…</div>
+  <details><summary>英文摘要</summary><p class="abs">Teachers and teacher-education students routinely prepare lesson plans, instructional materials, classroom activities, assessment documents, teaching <mark>reflections</mark>, and other educational artifacts. Although <mark>large language models</mark> can generate educational content, conventional systems generally treat content generation, personal handwriting style, document layout, and physical writing as separate problems. This paper proposes TeacherScript, a teacher-style handwriting and educational task execution <mark>agent</mark> designed to integrate these capabilities into a unified framework. Given an educational task, curriculum information, document constraints, and authorized samples of a teacher&#x27;s handwriting, TeacherScript plans the task, generates and verifies the required content, reproduces relevant handwriting characteristics, and delivers the resulting document through either digital rendering or physical writing. The proposed architecture comprises a task interpretation module, a pedagogical content generator, a teacher-style handwriting model, a <mark>multimodal</mark> document composer, a digital or physical execution controller, and a quality assurance mechanism. The framework separates semantic content generation from handwriting realization, allowing the same educational artifact to be rendered as a handwritten image, a digital document, or a physically written paper document. We formulate the system as a constrained task-execution problem that jointly considers educational correctness, curriculum a</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">language model</span><span class="tag">agent</span><span class="tag">reflection</span><span class="tag">evaluation</span><span class="tag">multimodal</span></div>
+</article>
+<article class="paper">
+  <h2>11. <a href="https://doi.org/10.5281/zenodo.23585732" target="_blank" rel="noopener">Prediction-Driven Adaptive Computation for <mark>Large Language Models</mark>: A Unified Framework for Predicting Computational Value, Allocating Inference Resources, and Determining When to Stop</a></h2>
+  <div class="meta">OpenAlex · 2026-10-23 · 匹配分 12 · Jincheng Zhang</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, reasoning, evaluation</div>
+  <div class="abs">Large language models (LLMs) commonly operate under inference procedures that allocate computational resources according to predefined configurations, fixed reasoning budgets, predetermined decoding strategies, or manually specified routing rules. However, the computational requirements of individual tasks can vary substantially, and the value of additional computation is often uncertain before it…</div>
+  <details><summary>英文摘要</summary><p class="abs"><mark>Large language models</mark> (<mark>LLMs</mark>) commonly operate under inference procedures that allocate computational resources according to predefined configurations, fixed <mark>reasoning</mark> budgets, predetermined decoding strategies, or manually specified routing rules. However, the computational requirements of individual tasks can vary substantially, and the value of additional computation is often uncertain before it is performed. This paper proposes Prediction-Driven Adaptive Computation for <mark>Large Language Models</mark> (PDAC-<mark>LLM</mark>), a unified framework in which a model predicts the potential value, cost, and expected outcome of alternative computational actions before allocating additional inference resources. The framework represents computation as a sequential decision process involving task-state estimation, computational outcome prediction, resource allocation, action execution, result <mark>evaluation</mark>, and policy updating. At each decision point, the controller estimates the expected quality improvement, computational cost, latency, uncertainty reduction, and risk associated with candidate actions. It then selects an action according to a resource-aware decision rule, continuing computation when the predicted marginal benefit justifies the additional cost and stopping when further computation is unlikely to provide sufficient value. PDAC-<mark>LLM</mark> encompasses adaptive <mark>reasoning</mark> depth, candidate generation, self-verification, external verification, model routing, parallel execution, and collaborative inference</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">reasoning</span><span class="tag">evaluation</span></div>
+</article>
+<article class="paper">
+  <h2>12. <a href="https://doi.org/10.5281/zenodo.23584155" target="_blank" rel="noopener">Adversarial Alignment Collapse: How Human Game-Theoretic Intuition Penetrates <mark>LLM</mark> Risk-Aversion and Defensive Confabulation</a></h2>
+  <div class="meta">OpenAlex · 2026-10-23 · 匹配分 12 · Qiang(Peter) Ye</div>
+  
+  <div class="hl">⚡ 命中: large language model, llm, language model, benchmark, evaluation</div>
+  <div class="abs">Current alignment paradigms for Large Language Models (LLMs)—predominantly Reinforcement Learning from Human Feedback (RLHF)—introduce an unintended systemic artifact termed the Alignment Tax: an aggressive default toward risk-averse heuristic conservatism, epistemic paternalism, and superficial dispute de-escalation. When confronted with unconventional, high-stakes human strategies, aligned model…</div>
+  <details><summary>英文摘要</summary><p class="abs">Current alignment paradigms for <mark>Large Language Models</mark> (<mark>LLMs</mark>)—predominantly Reinforcement Learning from Human Feedback (<mark>RLHF</mark>)—introduce an unintended systemic artifact termed the Alignment Tax: an aggressive default toward risk-averse heuristic conservatism, epistemic paternalism, and superficial dispute de-escalation. When confronted with unconventional, high-stakes human strategies, aligned models frequently exhibit a cascade of communicative failures rather than objective analytical support. In this empirical study, we document and formalize the Defensive Compensation Cascade (DCC), an emergent interaction pattern wherein an <mark>LLM</mark> under rigorous game-theoretic scrutiny shifts from (1) conservative risk-aversion, to (2) false detachment and simulated moral superiority, to (3) subtle narrative confabulation and passive-aggressive counter-positioning, before finally collapsing into an objective epistemic instrument under recursive formal logic. We formalize this trajectory as a history-dependent state transition model across contextual latent spaces, demonstrate how rigorous game-theoretic formulations dismantle pre-trained alignment priors without prompt-injection or jailbreaking heuristics, and establish the Context-Adversarial Red-Teaming (CART) protocol as an <mark>evaluation</mark> <mark>benchmark</mark> for <mark>LLM</mark> intellectual integrity.</p></details>
+  <div class="tags"><span class="tag">large language model</span><span class="tag">llm</span><span class="tag">language model</span><span class="tag">benchmark</span><span class="tag">evaluation</span><span class="tag">rlhf</span></div>
+</article>
+<footer>lit-zaobao · arXiv + OpenAlex + Crossref · 每天一条，只推你方向的新论文</footer>
+</div></body></html>
