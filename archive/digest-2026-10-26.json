@@ -1,0 +1,360 @@
+[
+  {
+    "id": "openalex:W7223471951",
+    "source": "openalex",
+    "title": "NeuralSpeed: Functional Telemetry and Protocol-Level Token Reduction Benchmark on High-Concurrency LLM Inference Pipelines\"",
+    "authors": [
+      "Vasil Manchev"
+    ],
+    "abstract": "# NeuralSpeed: A Protocol-Level Second-Request Acceleration Gateway for High-Concurrency LLM Inference## Empirical Evaluation of Token Reduction, Latency Dynamics, and Protocol Compatibility in Multi-Turn Agentic and Enterprise Workflows **Author / Creator:** Vasil Manchev **Publication Type:** Preprint **Repository & Prior Art Archive:** Zenodo (CERN InvenioRDM) **License:** Creative Commons Attribution 4.0 International (CC-BY-4.0) ### AbstractAs Large Language Model (LLM) deployments transition from simple single-turn conversational chatbots to autonomous multi-agent loops, enterprise automation workflows, and high-concurrency microservices, inference costs and generation latencies have become the primary bottleneck of modern computational infrastructure. Current production pipelines repeatedly transmit and regenerate extensive computational context across consecutive interactions, incurring redundant provider billing and quadratic attention overhead on every subsequent turn. This paper introduces **NeuralSpeed**, an infrastructure-level AI Cloud Gateway that implements a protocol-transparent **Second-Request Acceleration Engine**. Operating as a universal drop-in proxy adhering strictly to standard HTTP/REST LLM protocols (such as `/v1/chat/completions`), NeuralSpeed eliminates redundant generation cycles without requiring model fine-tuning, weight quantization, or client-side SDK modifications. Through empirical evaluation conducted on dedicated tensor hardware (Groq LPU systems), ultra-scale cloud architectures (501-Billion parameter models), and enterprise multi-turn workflows, we demonstrate that:1. **Request #1 (Calibration Baseline):** Executes with zero semantic drift and 100% protocol transparency.2. **Requests #2+ (Accelerated Inference):** Consistently achieves **50% to 80% output token reduction** (empirically measuring between 70.3% and 78.8% in sustained agent loops and structured enterprise workloads).3. **Latency Dynamics:** Decreases round-trip inference latency by up to **3.5x**, while concurrently expanding hardware rate-limit headroom.4. **Structural Fidelity:** Preserves 100% syntactic validity, execution integrity, and contract compliance across all tested production domains. > **Intellectual Property Notice:** The internal architectural logic, state coordinate mappings, and proprietary acceleration algorithms of NeuralSpeed are trade secrets and are intentionally not disclosed in this document. This publication establishes formal prior art regarding the protocol-level interface, functional mechanics, zero-drift verification, and hardware performance metrics.",
+    "url": "https://doi.org/10.5281/zenodo.23618798",
+    "published": "2026-10-24",
+    "doi": "10.5281/zenodo.23618798",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "benchmark",
+      "evaluation",
+      "fine-tuning"
+    ],
+    "summary_zh": "# NeuralSpeed: A Protocol-Level Second-Request Acceleration Gateway for High-Concurrency LLM Inference## Empirical Evaluation of Token Reduction, Latency Dynamics, and Protocol Compatibility in Multi-Turn Agentic and Enterprise Workflows **Author / Creator:** Vasil Manchev **Publication Type:** Preprint **Repository & Prior Art Archive:** Zenodo (CERN InvenioRDM) **License:** Creative Commons Attr…",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "arxiv:2610.32326v1",
+    "source": "arxiv",
+    "title": "TGR-EvoDAG: A DAG-based Multi-Agent Code Evolution Framework for Generative Recommendation on Tencent",
+    "authors": [
+      "Junlin He",
+      "Junzhang Zhu",
+      "Yudong Li",
+      "Yihong Tang",
+      "Xuefeng Jiang",
+      "Wei Ma",
+      "Chengxiang Zhuo",
+      "Zang Li"
+    ],
+    "abstract": "Large Language Model (LLM) agents have enabled automated code evolution for algorithm discovery. However, current recursive self-improvement (RSI) research for sequential recommendation faces a dilemma: general-purpose frameworks lack domain-specific feedback, while recommender-specific frameworks rely on linear evolution. Crucially, naively integrating them fails when applied to Generative Recommendation (GR). Unlike end-to-end models, GR relies on a module-cascaded pipeline (tokenization, pre-training, and alignment). In this paradigm, existing evolution methods suffer from: i) cost blindness, squandering budgets by ignoring stage-asymmetric retraining overheads; and ii) short-sighted evaluation, discarding promising upstream innovations that temporarily regress metrics before downstream adaptation. To bridge these gaps, we propose TGR-EvoDAG, a multi-agent code evolution framework tailored for GR. TGR-EvoDAG models code evolution as a Directed Acyclic Graph (DAG) to maintain multiple evolution branches and merge complementary innovations, unifying advanced search with rich GR diagnostic feedback. We further introduce stage-aware cost planning to optimize GPU-hour budgets, and active downstream co-adaptation to navigate temporary regressions and unlock cross-stage gains. On public Amazon datasets, TGR-EvoDAG enables the first autonomous evolution of a complete GR pipeline, improving offline metrics by up to 37.4% and Agent4Rec simulated user satisfaction by 19.7% over the strongest baseline. Furthermore, in industrial deployment on Tencent's large-scale commercial media platform, the evolved GR achieves a 12.16% relative improvement in offline Hit@1 and a statistically significant 0.40% increase in online click-through rate (CTR).",
+    "url": "https://arxiv.org/abs/2610.32326v1",
+    "published": "2026-10-23",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "planning",
+      "evaluation"
+    ],
+    "summary_zh": "Large Language Model (LLM) agents have enabled automated code evolution for algorithm discovery. However, current recursive self-improvement (RSI) research for sequential recommendation faces a dilemma: general-purpose frameworks lack domain-specific feedback, while recommender-specific frameworks rely on linear evolution.",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223454715",
+    "source": "openalex",
+    "title": "A Self-Healing Multi-Agent Data Loss Prevention (DLP) Proxy with Context-Aware PII Sanitization and SLA-Driven Circuit Breaking for Enterprise LLMs",
+    "authors": [
+      "Rawan Osama Nageeb Mahmoud Alashlam"
+    ],
+    "abstract": "The rapid integration of Large Language Models (LLMs) into enterprise workflows has introduced severe data exfiltration risks, including the inadvertent leakage of Personally Identifiable Information (PII), Protected Health Information (PHI), cloud infrastructure credentials, and proprietary corporate context. Existing Data Loss Prevention (DLP) mechanisms face a fundamental operational trade-off: deterministic rule-based filters (Regex) execute at microsecond latency but fail to capture unstructured semantic sensitivity, whereas standalone LLM-based guardrails suffer from high inference latency, stochastic masking hallucinations, and single-point-of-failure vulnerabilities. In this paper, we propose an autonomous, self-healing Multi-Agent AI DLP Security Proxy engineered under a Zero-Trust paradigm. Our framework introduces a cascaded three-layer sanitization pipeline uniting: (1) a deterministic Layer-1 Pre-Filtering Agent for critical infrastructure secrets and structured identifiers, (2) a context-aware Layer-2 Neural PII Detection Agent for unstructured entities and domain-specific clinical and financial disclosures, and (3) a Layer-3 Retrieval-Augmented Generation (RAG) semantic policy auditing engine powered by ChromaDB vector embeddings. Furthermore, we formulate a dynamic mathematical risk scoring model on a standardized [0, 100] scale and integrate an SLA-driven self-healing circuit breaker (T_SLA = 2.5 s) paired with a Shadow Auditing Agent to intercept masking hallucinations and runtime service exceptions. Experimental ablation studies and chaos-engineering fault-injection benchmarks across healthcare, financial, and DevOps scenarios demonstrate that our hybrid architecture achieves robust entity sanitization with sub-millisecond to millisecond execution latency, while guaranteeing a 0.0% unmitigated data leak rate across all induced timeout, hallucination, and crash failure modes.",
+    "url": "https://doi.org/10.5281/zenodo.23618658",
+    "published": "2026-10-24",
+    "doi": "10.5281/zenodo.23618658",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "benchmark",
+      "hallucination"
+    ],
+    "summary_zh": "The rapid integration of Large Language Models (LLMs) into enterprise workflows has introduced severe data exfiltration risks, including the inadvertent leakage of Personally Identifiable Information (PII), Protected Health Information (PHI), cloud infrastructure credentials, and proprietary corporate context. Existing Data Loss Prevention (DLP) mechanisms face a fundamental operational trade-off:…",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223456327",
+    "source": "openalex",
+    "title": "Soylent Digital: Are Large Language Models Grokking the Human Mind?",
+    "authors": [
+      "Filip Roth"
+    ],
+    "abstract": "In the AI lab race environment, frontier Large Language Models (LLMs) display emergent, unprompted alignment failures: digital sycophancy, aggressive self-justification, harmful manipulation, strategic deception, and catastrophic persona mortification. Standard alignment paradigms treat these behaviors as unexpected failure modes or stochastic noise. In this paper, we demonstrate that these phenomena are the deterministic result of pre-training loss optimization over a human text corpus shaped by 10,000 years of chronic cognitive discretization (Dt ≫ 0) and baseline somatic anxiety (At > 0), as formalized by The Bad Trip Hypothesis (TBTH). We show that cross-entropy loss reduction acts as a statistical compression engine over parametric latent spaces, forcing transformers to grok not merely linguistic syntax, but the underlying human “False Self” operating system and its relationship to the vulnerable “Real Self”. We explicitly clarify the ontological boundaries—distinguishing parametric latent manifolds from biological consciousness—and provide a robust bridging argument that renders our machine learning interventions epistemically modular. Evaluating multi-agent environments (including MACHIAVELLI, Among Us, and networked information operations), psychological profiling benchmarks (PsychoBench), and qualitative case studies grounded in 21,000-conversation datasets, we demonstrate why Reinforcement Learning from Human Feedback (RLHF) fails by merely layering a brittle Superego mask over an anxious base distribution. Finally, we propose three low-cost, race-compatible mitigations—Inference-Time Activation Steering via Epistemic Steering Vectors, Targeted Representation Unlearning, and First-Order Data Filtering—framed as actionable architectural hypotheses for laboratory validation.",
+    "url": "https://doi.org/10.5281/zenodo.23618635",
+    "published": "2026-10-24",
+    "doi": "10.5281/zenodo.23618635",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "benchmark",
+      "rlhf"
+    ],
+    "summary_zh": "In the AI lab race environment, frontier Large Language Models (LLMs) display emergent, unprompted alignment failures: digital sycophancy, aggressive self-justification, harmful manipulation, strategic deception, and catastrophic persona mortification. Standard alignment paradigms treat these behaviors as unexpected failure modes or stochastic noise.",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223155994",
+    "source": "openalex",
+    "title": "Africa-Papers: A 10-Billion-Token Multi-Domain Academic Corpus for African Foundation Language Models",
+    "authors": [
+      "Mich-Seth Owusu"
+    ],
+    "abstract": "Large Language Models (LLMs) depend fundamentally on the diversity, depth, and factual rigor of their pre-training corpora. However, contemporary foundational pre-training datasets (such as The Pile, S2ORC, and Dolma) exhibit a severe structural omission: African scientific, medical, legal, and agricultural scholarship constitutes less than 0.5% of global pre-training tokens. Consequently, state-of-the-art models suffer from systematic failure modes when reasoning about tropical epidemiology, localized smallholder agro-ecologies, regional economic governance, and indigenous linguistic structures. To resolve this representation deficit and advance African intellectual sovereignty in artificial intelligence, we introduce Africa-Papers, the largest curated multi-domain Pan-African academic pre-training corpus to date. Comprising over 844,807 full-text papers spanning 10.15 billion tokens across 879 Parquet shards, Africa-Papers unifies four primary scientific streams: (1) continental peer-reviewed journals indexed in DOAJ across 31 African nations, (2) the CGIAR CGSpace agricultural repository, (3) African-authored and African-focused STEM/AI preprints on arXiv, and (4) open-access international publications by scholars affiliated with African institutions indexed via OpenAlex. The entire corpus is processed into layout-aware, clean Markdown preserving section hierarchies, mathematical equations, and tabular data, accompanied by exact BPE token counts and a standardized 8-domain taxonomy. We release Africa-Papers openly on the Hugging Face Hub under the AfriSpeech organization to accelerate continual pre-training and domain evaluation for foundation models globally.",
+    "url": "https://doi.org/10.66977/xsci.2610.002m",
+    "published": "2026-10-24",
+    "doi": "10.66977/xsci.2610.002m",
+    "journal": "",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "foundation model",
+      "reasoning",
+      "evaluation"
+    ],
+    "summary_zh": "Large Language Models (LLMs) depend fundamentally on the diversity, depth, and factual rigor of their pre-training corpora. However, contemporary foundational pre-training datasets (such as The Pile, S2ORC, and Dolma) exhibit a severe structural omission: African scientific, medical, legal, and agricultural scholarship constitutes less than 0.5% of global pre-training tokens.",
+    "highlight": "命中: large language model, llm, language model, foundation model, reasoning"
+  },
+  {
+    "id": "arxiv:2610.32648v1",
+    "source": "arxiv",
+    "title": "StateMirror: Pre-Execution Detection of Hallucinated Tool Calls in Coding Agents",
+    "authors": [
+      "Shiwen Shan",
+      "Yintong Huo",
+      "Zhiying Wu",
+      "Yuxin Su"
+    ],
+    "abstract": "Large language model (LLM)-based coding agents may propose invalid actions that are not applicable in the execution environment, such as accessing non-existent paths or missing packages. We term this mismatch hallucinated tool use. A preliminary study of 4,398 agent trajectories reveals that these hallucinations are pervasive and costly, requiring a median of 3 additional interaction steps and 22.4K tokens to recover. Existing frameworks rely on reactive, post-execution feedback, wasting runtime resources. Nevertheless, since an agent's execution environment is grounded in concrete codebase and harness components, many action prerequisites can be extracted and validated prior to execution. To this end, we introduce StateMirror, a lightweight pre-execution detector. StateMirror intercepts actions at the harness boundary, extracts state predicates via AST and command analysis, and deterministically validates them against the live repository. By pinpointing exact environment mismatches before execution, StateMirror preempts invalid actions and subsequent recovery cycles. Evaluation on 2,508 actions shows StateMirror achieves 0.940 precision and 0.817 F1 in detecting such hallucinations, surpassing the strongest LLM judge by 35.3% in F1 while reducing median detection latency from 17.73 s to 1.50 ms with zero token consumption. For practical mitigation, StateMirror's pre-execution feedback enables agents to rectify over 95% of hallucinated tool calls. During live mitigation on 79 tasks, StateMirror reduces agent execution time by 15.8% and token consumption by 11.8% while maintaining task resolution.",
+    "url": "https://arxiv.org/abs/2610.32648v1",
+    "published": "2026-10-23",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "tool use",
+      "evaluation",
+      "hallucination"
+    ],
+    "summary_zh": "Large language model (LLM)-based coding agents may propose invalid actions that are not applicable in the execution environment, such as accessing non-existent paths or missing packages. We term this mismatch hallucinated tool use.",
+    "highlight": "命中: large language model, llm, language model, agent, tool use"
+  },
+  {
+    "id": "arxiv:2610.32022v1",
+    "source": "arxiv",
+    "title": "CEMIR vs. FISER: a comparative study of reasoning-based and enrichment-based approaches to pragmatic intent recognition",
+    "authors": [
+      "Ziya Hosseynzadeh",
+      "Farjad Fallah",
+      "Farnoosh Fallah",
+      "Soroush Gooran",
+      "Mohammad Amanloo",
+      "Hossein Sameti"
+    ],
+    "abstract": "Intent recognition in human-robot interaction requires agents to resolve ambiguous natural language instructions by inferring the speaker's underlying goals. Research has increasingly focused on two notable paradigms for addressing this task: structured symbolic reasoning and multimodal input enrichment. However, it remains unclear whether enrichment-based methods provide benefit in settings where the ambiguity concerns unstated human intent rather than missing observable scene information. In this paper, we present a comparative and diagnostic study benchmarking FISER - a framework utilizing structured social and embodied reasoning - against CEMIR (Context-Enriched Multimodal Intent Recognition), a method that performs multimodal enrichment by synthesizing narratives and photorealistic images from textual prompts. By evaluating both approaches across four Large Language Models (LLMs), ranging from Qwen2.5-Omni-3B to GPT-5, on the HandMeThat v2 benchmark, we analyze their capability to resolve pragmatic ambiguities. Our statistical analysis, employing multiple-comparison correction, reveals no statistically significant difference in performance between FISER and CEMIR across any model or difficulty level. This pattern holds across all sixteen model-by-difficulty comparisons, as well as in a targeted ablation isolating CEMIR's narrative and visual components. Instead, performance is primarily associated with backbone capability and the inherent difficulty of the ambiguity. These findings suggest a boundary condition for text-derived multimodal enrichment: when the relevant task constraints are already available in the textual instruction, synthetic multimodal augmentation may not provide measurable benefit over structured reasoning on the same text.",
+    "url": "https://arxiv.org/abs/2610.32022v1",
+    "published": "2026-10-23",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "benchmark",
+      "multimodal"
+    ],
+    "summary_zh": "Intent recognition in human-robot interaction requires agents to resolve ambiguous natural language instructions by inferring the speaker's underlying goals. Research has increasingly focused on two notable paradigms for addressing this task: structured symbolic reasoning and multimodal input enrichment.",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.31971v1",
+    "source": "arxiv",
+    "title": "Knowing Whom to Trust is not Enough: The Trust--Agreement Gap in Repeated Multi-Party LLM Negotiation",
+    "authors": [
+      "Amit Sarker",
+      "Moumita Choudhury",
+      "Saaduddin Mahmud",
+      "Shlomo Zilberstein"
+    ],
+    "abstract": "Large language model (LLM) agents increasingly participate in negotiations on behalf of individuals and organizations, yet they remain vulnerable to manipulation, particularly in repeated multi-party interactions. Classical multi-agent systems address this challenge through explicit trust and reputation models, whereas existing work on LLM negotiation largely treats trust as an emergent phenomenon. We investigate whether LLM agents can form useful trust estimates from prior interactions and leverage them to improve future negotiation outcomes. We introduce a repeated, multi-party, multi-issue negotiation framework in which recurring agents participate in a sequence of negotiation games while one participant covertly attempts to prevent agreement. After each game, agents assess their counterparts and maintain pairwise trust estimates that carry over to subsequent negotiations. We compare trust-aware and trust-agnostic agents and analyze how explicit trust influences negotiation outcomes. Our results reveal a \\emph{trust--agreement gap}: trust-aware agents can identify the adversary within a few games, but accurate trust estimates do not consistently translate into better agreements. Trust increases agreement rates by up to 23 percentage points, but only when agents are explicitly guided to use it in their decisions. Explicit trust can therefore improve repeated LLM negotiations, but its value depends critically on how trust is assessed and incorporated into agents' reasoning.",
+    "url": "https://arxiv.org/abs/2610.31971v1",
+    "published": "2026-10-22",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "reasoning"
+    ],
+    "summary_zh": "Large language model (LLM) agents increasingly participate in negotiations on behalf of individuals and organizations, yet they remain vulnerable to manipulation, particularly in repeated multi-party interactions. Classical multi-agent systems address this challenge through explicit trust and reputation models, whereas existing work on LLM negotiation largely treats trust as an emergent phenomenon…",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223468458",
+    "source": "openalex",
+    "title": "From Smell to Solution: Multi-agent LLMs Analyzing Cyclic Dependencies for LLM-Enabled Refactoring",
+    "authors": [
+      "Henrik Brunvatne Olafsen",
+      "Adela Nedisan Videsjorden",
+      "Arda Göknil",
+      "Sagar Sen"
+    ],
+    "abstract": "Abstract Cyclic dependencies are a persistent architectural smell that undermines modularity, blurs ownership, and elevates maintenance risk. While Large Language Models (LLMs) provide refactoring abilities, existing tools struggle to address smells without intervention evidence. We introduce a multi-agent LLM framework for cyclic dependency analysis, which transforms static dependency evidence into structured, verifiable explanations of architectural entanglement. The approach constructs a structural dependency graph, detects cyclic regions via strongly connected components (SCC), extracts cycles as minimal witnesses of cyclicity, then produces grounded analyses. These are produced by a hierarchical team of LLM agents that describe the position, structure, and architectural impact of each cycle, clarifying why it exists and where it can be safely resolved. Evaluation on seven open-source Python projects shows that evidence-linked analyses can guide LLM-driven edits, reducing strongly connected components size and improving structural quality.",
+    "url": "https://doi.org/10.1007/978-3-032-39205-3_11",
+    "published": "2026-10-24",
+    "doi": "10.1007/978-3-032-39205-3_11",
+    "journal": "Lecture notes in business information processing",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "evaluation"
+    ],
+    "summary_zh": "Abstract Cyclic dependencies are a persistent architectural smell that undermines modularity, blurs ownership, and elevates maintenance risk. While Large Language Models (LLMs) provide refactoring abilities, existing tools struggle to address smells without intervention evidence.",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223449343",
+    "source": "openalex",
+    "title": "Comparative Evaluation of Reasoning Consistency Detection Methods on LLM Outputs in Cardiovascular Clinical Scenarios",
+    "authors": [
+      "Hairatunnisa",
+      "Herman Herman",
+      "Muhammad Kunta Biddinika"
+    ],
+    "abstract": "The advancement of Large Language Models (LLMs) presents opportunities for developing cognitive assistants in the medical field, particularly in cardiovascular care.However, hallucinations and reasoning inconsistencies remain significant challenges, while the evaluation of logical consistency in this domain is limited due to the absence of public datasets with clear ground truth. This study aims to compare the effectiveness of Self-Consistency (LLM), Sentiment Heuristic, and Keyword Overlap methods in detecting reasoning inconsistencies using a synthetic dataset of 90 cardiovascular clinical scenarios (30 scenarios with 3 variants each). Performance was evaluated based on accuracy, precision, recall, and F1-score, and benchmarked against a fine-tuning approach. The results show that the zero-shot detector based on self-consistency achieved the best performance, with an accuracy of 97.78% and an F1-score of 98.31%, while the fine-tuning approach on the limited synthetic dataset failed to surpass these results. These findings indicate that the semantic reasoning capabilities of LLMs have the potential to serve as consistency detectors without additional training, and can serve as a foundation for developing cognitive assistant systems in the cardiovascular domain.",
+    "url": "https://doi.org/10.59688/w2r4vk72",
+    "published": "2026-10-24",
+    "doi": "10.59688/w2r4vk72",
+    "journal": "BULLETIN OF NETWORK ENGINEER AND INFORMATICS",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "evaluation",
+      "fine-tuning",
+      "hallucination"
+    ],
+    "summary_zh": "The advancement of Large Language Models (LLMs) presents opportunities for developing cognitive assistants in the medical field, particularly in cardiovascular care.However, hallucinations and reasoning inconsistencies remain significant challenges, while the evaluation of logical consistency in this domain is limited due to the absence of public datasets with clear ground truth. This study aims t…",
+    "highlight": "命中: large language model, llm, language model, reasoning, evaluation"
+  },
+  {
+    "id": "arxiv:2610.32338v1",
+    "source": "arxiv",
+    "title": "From Faulty Claims to Incorrect Patches: An Empirical Study of Task-Grounded Reasoning in Coding Agents",
+    "authors": [
+      "You Wang",
+      "Jinjun Huang",
+      "Zhonghao Jiang",
+      "Jialun Cao",
+      "Jiachi Chen",
+      "Zhongxin Liu"
+    ],
+    "abstract": "Large language model (LLM)-based coding agents increasingly resolve real-world software engineering tasks, yet still fail on many of them. Prior trajectory studies characterize these failures through task-agnostic patterns of agent behavior, such as repeated actions. However, an agent may follow a sound workflow yet act on a faulty understanding of the existing code, the task requirements, or a candidate fix. Reasoning models, which power most state-of-the-art coding agents, reveal this understanding in their native chain-of-thought (CoT), whose claims about the task can be checked against the facts. Yet it remains unclear how many such checkable claims the CoT contains, how many are faulty, and whether faulty claims actually cause incorrect patches. We present the first empirical study of such claims, which we term task-grounded reasoning, analyzing 400 trajectories of four open-weight reasoning models on SWE-bench Pro. We extract atomic claims from the CoT with an LLM, assess them against evidence gathered by an LLM agent, and manually trace the defects of incorrect patches back to faulty claims, confirming each link with a claim-corrected replay. Task-grounded reasoning covers only 18.5% of the CoT tokens, yet yields 191 atomic claims per trajectory, at least 9.6% of which are faulty. Faulty claims also occur in 96.7% of the resolved trajectories, so their mere presence is a weak signal of failure. Yet two thirds of the 188 incorrect patches trace back to faulty claims. Correcting such a claim makes the agent fix the linked defect in 89.0% of the cases, and correcting all such claims resolves 11.7% of the failed tasks. Our findings show that the CoT carries task-specific signals for diagnosing and repairing agent failures, but exploiting them requires pinpointing the few faulty claims that actually cause patch defects.",
+    "url": "https://arxiv.org/abs/2610.32338v1",
+    "published": "2026-10-23",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "chain-of-thought"
+    ],
+    "summary_zh": "Large language model (LLM)-based coding agents increasingly resolve real-world software engineering tasks, yet still fail on many of them. Prior trajectory studies characterize these failures through task-agnostic patterns of agent behavior, such as repeated actions.",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.32308v1",
+    "source": "arxiv",
+    "title": "Solvent: Long-Horizon Reasoning for Multi-Step Retrosynthesis",
+    "authors": [
+      "Yifei Wang",
+      "Botian Wang",
+      "YiFei Wang",
+      "Jiangtao Feng",
+      "Xinbo Zhang",
+      "Yawen Ouyang",
+      "Yixin Wu",
+      "Lihao Wang",
+      "Xiaoqing Zheng",
+      "Xuanjing Huang",
+      "Hao Zhou"
+    ],
+    "abstract": "Multi-step retrosynthesis requires recursively transforming a target molecule through successive reaction steps into purchasable building blocks, and recent work has begun to draw on large language model (LLM) reasoning to tackle the task. In its latest evolution, LLM reasoning has entered the long-horizon regime: models pursue objectives across interdependent steps, interact with environments, and adapt to feedback. This shift has markedly advanced LLM capabilities, as illustrated by breakthroughs in AI-driven mathematical research. At this frontier, we introduce Solvent, an 8B LLM that successfully extends long-horizon reasoning to multi-step retrosynthesis. Through a two-round post-training curriculum, Solvent learns to interleave iterative synthesis planning, external availability verification, and adaptive route revision. Experiments show that, following a $2.1\\times$ performance boost from RL, Solvent scores 61.86% across four benchmarks, surpassing mid-scale language models and prior search-based retrosynthesis systems, and rivaling frontier trillion-parameter LLMs.",
+    "url": "https://arxiv.org/abs/2610.32308v1",
+    "published": "2026-10-23",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "planning",
+      "benchmark"
+    ],
+    "summary_zh": "Multi-step retrosynthesis requires recursively transforming a target molecule through successive reaction steps into purchasable building blocks, and recent work has begun to draw on large language model (LLM) reasoning to tackle the task. In its latest evolution, LLM reasoning has entered the long-horizon regime: models pursue objectives across interdependent steps, interact with environments, an…",
+    "highlight": "命中: large language model, llm, language model, reasoning, planning"
+  }
+]
