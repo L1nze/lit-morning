@@ -1,0 +1,369 @@
+[
+  {
+    "id": "arxiv:2610.35686v1",
+    "source": "arxiv",
+    "title": "FISRF: Flexible Instructional Scaffolding Reflection Framework for Robotics Task Planning with Large Language Model",
+    "authors": [
+      "Qingmiao Liang",
+      "Jiatao Zhang",
+      "Runxin Zou",
+      "Yufan Song",
+      "Wei Song",
+      "Yuhua Zheng"
+    ],
+    "abstract": "Large Language Models (LLMs) are widely adopted for reflective error correction in task planning; however, existing approaches primarily rely on autonomous exploration, rendering them prone to accumulating erroneous experiences during early interactions with new environments. To address this limitation, we propose the Flexible Instructional Scaffolding Reflection Framework (FISRF), an agent--mentor architecture that estimates the robot's Zone of Proximal Development (ZPD) in task planning and adaptively selects reflection strategies and mentor guidance, thereby facilitating the accumulation of effective error-correction experience. Experiments in ALFWorld and on real-world robotic platforms demonstrate that FISRF reduces the average number of error-correction rounds by 37% and redundant reasoning by 25.1%, while improving the overall task success rate by 8%. Project webpage : https://fisrfplanning.github.io/",
+    "url": "https://arxiv.org/abs/2610.35686v1",
+    "published": "2026-10-26",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 17,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "planning",
+      "reflection"
+    ],
+    "summary_zh": "Large Language Models (LLMs) are widely adopted for reflective error correction in task planning; however, existing approaches primarily rely on autonomous exploration, rendering them prone to accumulating erroneous experiences during early interactions with new environments. To address this limitation, we propose the Flexible Instructional Scaffolding Reflection Framework (FISRF), an agent--mento…",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "doi:10.1088/1674-1056/aeb900",
+    "source": "crossref",
+    "title": "PhysAgent: A Multi-Agent Large Language Model Framework for Physics Data Analysis and Simulation",
+    "authors": [
+      "Han Xiao-Qi",
+      "Gao Ze-Feng",
+      "Guo Peng-Jie",
+      "Lu Zhong-Yi"
+    ],
+    "abstract": "Abstract The inference of physical laws has traditionally relied on human intuition, analytical reasoning, and experimental observation. However, modern physics research is increasingly constrained by challenges such as high specialization, fragmented workflows, and limited computational resources, which impede scientific progress. To address these issues, we introduce PhysAgent , a novel multi-agent system powered by large language models (LLMs), designed to execute end-to-end scientific workflows—from hypothesis generation and computational modeling to data analysis and reporting. PhysAgent’s innovation lies in its specialized agent collaboration: a Mentor Agent guides scientific reasoning through Socratic questioning, a Student Agent handles technical execution (e.g., code implementation, DFT calculations), and a Leader Agent dynamically optimizes task scheduling and resource allocation. Integrating domain-specific tools like first-principles simulations (e.g., Quantum ESPRESSO, VASP), PhysAgent aims to improve reproducibility while maintaining human-in-the-loop refinement. We demonstrate PhysAgent as a proof-of-concept framework for recovering known physical relations from controlled data, including Kepler-law recovery from orbital trajectories and Newton-law recovery from force-motion data. Furthermore, it extends to ab initio materials modeling, automating electronic structure workflows (e.g., GaAs band-structure and density-of-states calculations). In addition, PhysAgent simulates complex real-world phenomena, such as raindrop flow on train windows. By harmonizing LLM-driven planning with domain-specific tools, PhysAgent provides a reproducible multi-agent workflow for physics data analysis and simulation. We provide a demonstration video of PhysAgent to illustrate its workflow and capabilities: https://b23.tv/emOilkC.",
+    "url": "https://doi.org/10.1088/1674-1056/aeb900",
+    "published": "2026-10-26",
+    "doi": "10.1088/1674-1056/aeb900",
+    "journal": "Chinese Physics B",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 17,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "reasoning",
+      "planning"
+    ],
+    "summary_zh": "Abstract The inference of physical laws has traditionally relied on human intuition, analytical reasoning, and experimental observation. However, modern physics research is increasingly constrained by challenges such as high specialization, fragmented workflows, and limited computational resources, which impede scientific progress.",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "doi:10.2196/103962",
+    "source": "crossref",
+    "title": "Systematic Scoring Differences in Large Language Model–Based Clinical Benchmarking Reveal Evaluator-Dependent Divergence: Controlled Evaluation Study",
+    "authors": [
+      "Dinc Rasit",
+      "Ardic Nurittin"
+    ],
+    "abstract": "Abstract Background Large language model (LLM) benchmarking in clinical medicine is increasingly reliant on LLM-based assessment frameworks; in these systems, one AI scores the outputs of another. This practice relies on the assumptions of evaluator neutrality and rubric consistency. These assumptions have not been empirically tested in clinical fields. Objective In this study, we aim to directly examine these assumptions by using the PARM (Planning-Action-Reflection-Memory) framework as a theoretical lens to characterize endovascular device selection and clinical reflective reasoning as a clinical field. Methods We developed a scoring rubric (C1-C6) with 40 clinical vignettes and 6 criteria across 5 endovascular fields (peripheral artery disease, abdominal aortic aneurysm, chronic venous insufficiency, coronary in-stent restenosis [ISR], and cerebrovascular/neuroendovascular; 8 vignettes per field). Four LLMs were evaluated as clinical decision support systems: GPT-4o (M1), Claude Sonnet 4.6 (M2), Gemini 1.5 Pro (M3), and Llama 3.3 70B (M4). Two LLMs served as independent raters with the same evaluation criteria: Claude Sonnet 4.6 (rater 1) and GPT-4o (rater 2). The rater identity was intentionally disclosed; the primary research question concerned rater scoring behavior rather than the absolute performance of the model. Human assessment was intentionally excluded because its inclusion would have shifted the study question from rater disagreement to rater accuracy, a distinct and secondary question. Interrater reliability was measured using intraclass correlation coefficient (ICC 2,1) two-way random effects modeling. Results The combined ICC(2,1) was 0.153 (95% CI 0.007‐0.295). In this exploratory study, the low ICC was not distributed randomly: the magnitude of score differences varied across models (M2 Δ=+5, M4 Δ=+31, M1 Δ=−46, and M3 Δ=−158 points). Scoring behavior analysis identified 2 intrinsically consistent but mutually inconsistent criterion-interpretation models. Rater 1’s scores were most consistent with the reasoning quality approach (partial credit to clinical competence independent of vignette context). Rater 2’s scores were most consistent with the context fidelity approach (near-zero scores for wrong vignette responses independent of reasoning quality). Contrary to the self-preference hypothesis, both raters placed the other higher-performing model above their own. Under rater 1, C6 (PARM reflection) was the lowest-scoring criterion across all 4 models, whereas rater 2 showed greater model-dependent variation in C6 scoring. Conclusions AI raters used in LLM-based clinical benchmarking do not behave as interchangeable scoring tools. Their scoring behavior is most consistent with model-specific criterion interpretation patterns that systematically produce different outcomes. The observed low interrater reliability requires interpretation rather than simply being ignored: it reflects structured, direction-specific disagreement concentrated in models with context-tracking failures, not random inconsistency. PARM reflection showed a notable yet evaluator-dependent scoring pattern that warranted further investigation, rather than being interpreted as an evaluator-independent deficit.",
+    "url": "https://doi.org/10.2196/103962",
+    "published": "2026-10-26",
+    "doi": "10.2196/103962",
+    "journal": "JMIR AI",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 17,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "planning",
+      "reflection",
+      "evaluation",
+      "memory"
+    ],
+    "summary_zh": "Abstract Background Large language model (LLM) benchmarking in clinical medicine is increasingly reliant on LLM-based assessment frameworks; in these systems, one AI scores the outputs of another. This practice relies on the assumptions of evaluator neutrality and rubric consistency.",
+    "highlight": "命中: large language model, llm, language model, reasoning, planning"
+  },
+  {
+    "id": "arxiv:2610.34836v1",
+    "source": "arxiv",
+    "title": "Collective Emergent Alignment: Measuring and Amplifying Interaction-Induced Reasoning Alignment in Multi-Agent LLMs",
+    "authors": [
+      "Boxuan Wang",
+      "Zhuoyun Li",
+      "Sarvapali D. Ramchurn",
+      "Xiaowei Huang",
+      "Yi Dong"
+    ],
+    "abstract": "Multi-agent large language model (LLM) systems can exhibit emergent behaviors through interaction, yet whether a similar phenomenon exists for reasoning alignment remains largely unexplored. We study whether agent interaction produces additional reference-grounded reasoning alignment beyond matched individual self-refinement, and introduce REMAP (Reference-Entailment-Matrix for Agentic Process), a framework that quantifies this effect through Semantic Coverage and interaction-specific alignment gains. Across diverse model families and two multi-hop reasoning benchmarks, we observe broadly positive interaction gains, particularly on reasoning content that depends on integrating evidence distributed across agents. These gains are consistently associated with independently measured peer-information recovery, while further analysis reveals composition-dependent heterogeneity effects and asymmetric information transfer across agent capability levels. Motivated by these findings, we further introduce a fact-level multi-agent communication framework that replaces full reasoning-trace exchange with compact, gap-aware, and selectively routed information. Our experiments show that compact fact exchange improves reasoning alignment and task performance while reducing communication overhead, whereas more selective communication exposes a trade-off between acquiring distributed information, retaining local content, and communication efficiency. Overall, our results show that collective emergent alignment can be quantified, linked to information-transfer patterns, and used to guide more effective multi-agent communication.",
+    "url": "https://arxiv.org/abs/2610.34836v1",
+    "published": "2026-10-26",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "reasoning",
+      "benchmark"
+    ],
+    "summary_zh": "Multi-agent large language model (LLM) systems can exhibit emergent behaviors through interaction, yet whether a similar phenomenon exists for reasoning alignment remains largely unexplored. We study whether agent interaction produces additional reference-grounded reasoning alignment beyond matched individual self-refinement, and introduce REMAP (Reference-Entailment-Matrix for Agentic Process), a…",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "arxiv:2610.35160v1",
+    "source": "arxiv",
+    "title": "AutoEnergyDesign: An LLM-Driven Agent for Automatic Energy System Design Optimization",
+    "authors": [
+      "Amedeo Buonanno",
+      "Salvatore Fabozzi",
+      "Maria Valenti"
+    ],
+    "abstract": "Designing building energy systems is a high-dimensional, mixed-integer search problem: when each design is evaluated by a year-long simulation, black-box optimizers typically need hundreds of evaluations. This paper presents AutoEnergyDesign, a framework in which a Large Language Model (LLM) agent reasons over previous simulation results, proposes configuration changes and learns in context from each outcome, while a git-based mechanism automatically reverts unsuccessful changes. The agent couples a reasoning model with an explicit memory organisation (procedural, semantic, episodic and reflective), a constrained action interface and an environment-grounded keep/revert signal. The simulator covers eight technologies (photovoltaics, micro-wind, combined heat and power, solar thermal, gas boilers, batteries, heat pumps and inverters) and computes the 25-year Net Present Cost (NPC), including capital and operating costs and salvage value. On a case study with measured building load profiles, the agent, run with Claude Haiku 5.5, Sonnet 5.5 and Opus 5.5 (ten runs of 50 simulations each), is compared with random search, Tree-structured Parzen Estimator (TPE) Bayesian optimization and a $(1+1)$ evolution strategy sharing the agent's acceptance rule (300 evaluations, ten seeds). With all three models the agent reaches an NPC of about 3.53 MEUR, 1.20% below the best TPE result and 0.23% below the best evolution-strategy result. It comes within 1% of this design after a median of 18 (Opus) to 27.5 (Haiku) simulations, whereas among the baselines only the evolution strategy does so, in half of its seeds and after a median of 192 evaluations. Opus reaches the best design in all ten runs, Sonnet in six (two runs never come within 1%), and Haiku comes within 1% in every run but reaches it exactly only once. Every decision is recorded in an auditable trace.",
+    "url": "https://arxiv.org/abs/2610.35160v1",
+    "published": "2026-10-26",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "evaluation",
+      "memory"
+    ],
+    "summary_zh": "Designing building energy systems is a high-dimensional, mixed-integer search problem: when each design is evaluated by a year-long simulation, black-box optimizers typically need hundreds of evaluations. This paper presents AutoEnergyDesign, a framework in which a Large Language Model (LLM) agent reasons over previous simulation results, proposes configuration changes and learns in context from e…",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.34866v1",
+    "source": "arxiv",
+    "title": "UniGFM-RAG: Unify Graph Foundation Models and Large Language Models for End-to-End Retrieval and Reasoning",
+    "authors": [
+      "Zicheng Zhao",
+      "Linhao Luo",
+      "Zongji Yu",
+      "Junnan Dong",
+      "Yanchao Tan",
+      "Shirui Pan",
+      "Chen Gong"
+    ],
+    "abstract": "Large Language Models (LLMs) have shown remarkable capabilities across tasks, but they still struggle with complex reasoning that requires integrating scattered knowledge. Graph Retrieval-Augmented Generation (GraphRAG) addresses this challenge by organizing fragment knowledge as graphs, while recent Graph Foundation Models (GFMs) further improve GraphRAG with graph-native retrieval and reasoning capabilities. However, existing GraphRAG methods usually adopt decoupled retrieve-then-generate pipelines, which create objective misalignment between retrieval and reasoning, and training GFM retrievers typically depends on expensive human annotations. To address these limitations, we propose \\ourmethod, a unified end-to-end GraphRAG framework that tightly couples a GFM retriever with an LLM generator. Given a query, the GFM retriever first reasons over the graph to score and retrieve relevant document nodes. These node embeddings are then passed through a fully differentiable graph bridge, which projects them into soft-weighted graph prefixes according to retrieval scores and combines them with raw document texts to form graph-augmented prompts. In this way, structural information is injected directly into LLM generation, while the final answer loss can be back-propagated through the bridge to jointly optimize retrieval and reasoning. To stabilize training and reduce reliance on costly annotations, we further introduce a semantic-guided distillation module that provides auxiliary supervision using pseudo-labels derived from query-document semantic similarities. Extensive experiments on three multi-hop QA datasets and three out-of-domain GraphRAG benchmarks show that \\ourmethod consistently outperforms strong baseline methods and generalizes well, which demonstrates the effectiveness of end-to-end GraphRAG with tightly integrated GFM retrieval and LLM reasoning.",
+    "url": "https://arxiv.org/abs/2610.34866v1",
+    "published": "2026-10-26",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "foundation model",
+      "reasoning",
+      "benchmark"
+    ],
+    "summary_zh": "Large Language Models (LLMs) have shown remarkable capabilities across tasks, but they still struggle with complex reasoning that requires integrating scattered knowledge. Graph Retrieval-Augmented Generation (GraphRAG) addresses this challenge by organizing fragment knowledge as graphs, while recent Graph Foundation Models (GFMs) further improve GraphRAG with graph-native retrieval and reasoning …",
+    "highlight": "命中: large language model, llm, language model, foundation model, reasoning"
+  },
+  {
+    "id": "openalex:W7223577534",
+    "source": "openalex",
+    "title": "PatchPilot: Diff-Gated Dependency Vulnerability Remediation with Deterministic Planning and Bounded Model-Assisted Source Repair",
+    "authors": [
+      "Sivaprakash J"
+    ],
+    "abstract": "Third-party dependency vulnerabilities are detected reliably but repaired badly. Scanners identify the advisory and point at a fixed version range; they rarely establish whether the upgrade is safe for the project that consumes it, and almost never repair the source code that the upgrade breaks. Recent work responds by delegating the decision to large language model (LLM) agents, yet a large-scale study of agent-authored pull requests finds that agents select already-vulnerable versions more often than humans do, and that remediating those selections disproportionately requires major-version upgrades. A benchmark of 203 real dependency-upgrade tasks reports that the strongest coding-agent configuration completes barely half of them, with the dominant failure being an incomplete repository-wide migration. This paper presents PatchPilot, a Visual Studio Code extension for the npm, Apache Maven and Python/PyPI ecosystems that deliberately separates three decision authorities which existing tools conflate: version selection, source repair and build adjudication. Version selection is fully deterministic—computed from registry metadata and Open Source Vulnerabilities (OSV) advisory evidence, restricted to exact version pins, and rendered as a reviewable diff before any byte is written. Build adjudication belongs to the project’s own test commands, executed without a shell from a fixed template table. Source repair is the only task delegated to a model, and it is confined by a hard never-editable manifest boundary, a path allowlist, exact-once edit semantics and byte budgets, behind a per-request consent gate. Every write is preceded by a SHA-256 snapshot, so rollback restores byte-identical content and detects files the developer edited in the meantime. We evaluate PatchPilot as a design-science artifact: we state the invariants the architecture is required to satisfy, trace each to its implementing mechanism, and verify them through 252 pure unit tests that run without VS Code or network access, extension-host smoke tests, four reproducible sample projects and a headless end-to-end runner. We report the properties that hold by construction, identify the security properties that do not hold, and outline the benchmark-based empirical evaluation that remains future work. Index Terms—software supply chain security, dependency management, vulnerability remediation, software composition analysis, large language model agents, automated program repair, developer tooling",
+    "url": "https://doi.org/10.5281/zenodo.23646223",
+    "published": "2026-10-25",
+    "doi": "10.5281/zenodo.23646223",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "planning",
+      "benchmark",
+      "evaluation"
+    ],
+    "summary_zh": "Third-party dependency vulnerabilities are detected reliably but repaired badly. Scanners identify the advisory and point at a fixed version range; they rarely establish whether the upgrade is safe for the project that consumes it, and almost never repair the source code that the upgrade breaks.",
+    "highlight": "命中: large language model, llm, language model, agent, planning"
+  },
+  {
+    "id": "arxiv:2610.35598v1",
+    "source": "arxiv",
+    "title": "Evolve on Graph: Self-Evolving Knowledge Graph Reasoning without Question Annotations",
+    "authors": [
+      "Zongyuan Sun",
+      "Shuai Zhao",
+      "Ke Shu",
+      "Ziyue Zhu",
+      "Shangyang Wu",
+      "Yuanlin Lin",
+      "Tao Wang",
+      "Shiyue Li",
+      "Yingjun Du",
+      "Anh Tuan Luu",
+      "Haoran Luo"
+    ],
+    "abstract": "Knowledge graphs (KGs) provide reliable external knowledge for multi-hop factual reasoning with large language models (LLMs), yet most KGs in real-world domains such as finance and industry lack question--answer (QA) annotations. Without such annotations, existing methods struggle to improve LLM graph reasoning: training-free agents cannot improve their exploration through interaction; reinforcement learning (RL) agents depend on QA data annotated by humans or synthesized by closed-source models; and training data is typically built offline, so its topology mix is fixed and cannot follow the agent's ability. We propose Evolve on Graph (EoG), a framework that lets an LLM self-evolve its graph reasoning without any QA annotations. Through Graph Self-Play, a single LLM alternates between a Proposer that poses questions and a Solver that answers them. To make questions verifiable, Symbolically Verifiable Topology Synthesis (SVTS) samples reasoning topologies on the KG and executes the corresponding first-order logic queries, yielding topology skeletons with correct and complete answer sets; guided by a skeleton, the Proposer explores the graph to pose a multi-hop question. To let task topologies follow the Solver, a Boundary-Aware Graph Curriculum rewards the Proposer by the Solver's score variance, keeping questions at the Solver's capability boundary so that complex topologies enter training as the Solver improves. On six benchmarks over Freebase, Wikidata, and an industrial KG, EoG consistently outperforms prompting-, retrieval-, and agent-based methods, showing that LLM graph reasoning can improve through self-play without QA annotations. Our code is available at https://github.com/Szy5/EoG",
+    "url": "https://arxiv.org/abs/2610.35598v1",
+    "published": "2026-10-26",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "benchmark"
+    ],
+    "summary_zh": "Knowledge graphs (KGs) provide reliable external knowledge for multi-hop factual reasoning with large language models (LLMs), yet most KGs in real-world domains such as finance and industry lack question--answer (QA) annotations. Without such annotations, existing methods struggle to improve LLM graph reasoning: training-free agents cannot improve their exploration through interaction; reinforceme…",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.34878v1",
+    "source": "arxiv",
+    "title": "ClinVerse: A Realistic Multi-Agent Diagnostic Environment for Training and Evaluating Medical Agents",
+    "authors": [
+      "Sirry Chen",
+      "Fangke Chen",
+      "Xuanwen Ding",
+      "Wei Chen",
+      "Zhongyu Wei"
+    ],
+    "abstract": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction. To address this limitation, we present ClinVerse, an interactive, real-data-grounded multi-agent environment designed for training and evaluating medical diagnostic agents. Built on ClinPatient, a scalable dataset comprising 150k diagnostic cases derived from real-world electronic health records, ClinVerse supports coordinated interactions among six specialized clinical roles. Specifically, a doctor agent starts from an initial patient complaint, progressively gathers clinical evidence through patient interviews and examination requests, and ultimately produces a diagnosis. For each interaction trajectory, a rule-based scoring framework quantifies information acquisition, examination ordering, and diagnostic accuracy. These trajectory-level scores serve as reward signals for agent training while also enabling scalable evaluation. In experiments, we evaluate various general-purpose and medical-domain models and show that nine self-evolution methods across three categories consistently improve agents' diagnostic capabilities within ClinVerse. We further analyze the interplay among model capability, environment feedback, and self-evolution methods.",
+    "url": "https://arxiv.org/abs/2610.34878v1",
+    "published": "2026-10-26",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "evaluation"
+    ],
+    "summary_zh": "Disease diagnosis is a key application of large language model (LLM) agents in healthcare. However, existing medical agents are primarily trained and evaluated with static question-answering data, providing limited opportunities to learn active information acquisition, examination decision-making, and dynamic clinical interaction.",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223556161",
+    "source": "openalex",
+    "title": "Provenance-Gated Memory and Deontic Output Supervision for Epistemically Grounded Autonomous Agents",
+    "authors": [
+      "Sean Maxwell"
+    ],
+    "abstract": "Autonomous agents driven by Large Language Models (LLMs) operating in extended multi-session settings suffer from two systemic failure modes: (1) recursive hallucination compounding, wherein unverified model-originated narration is committed to long-term memory and subsequently retrieved as established truth; and (2) fabricated action claims, wherein agents assert execution of irreversible real-world side effects without verified tool execution. We present the architecture and mechanical evaluation of Project Lucca, an open-source (GNU AGPLv3), local-first neuro-symbolic agent architecture designed for strict epistemic grounding. Lucca enforces two primary defenses: (1) a Six-Signer Cryptographic Provenance Gate that requires domain-separated HKDF HMAC-SHA256 signatures for persistent memory commits, enforcing an epistemic invariant at the database schema level that separates conversational continuity from factual grounding eligibility; and (2) a Deontic Truth-in-Receipt Output Supervisor that screens generated speech tokens against deterministic execution receipts before user presentation. We evaluate these mechanisms across an authored 73-test deterministic unit battery, a 100-probe live action-hallucination testbed across edge models (Gemma 4 E2B/E4B), and analyze documented production failure modes under compute constraints.",
+    "url": "https://doi.org/10.5281/zenodo.23649048",
+    "published": "2026-10-26",
+    "doi": "10.5281/zenodo.23649048",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "evaluation",
+      "hallucination",
+      "memory"
+    ],
+    "summary_zh": "Autonomous agents driven by Large Language Models (LLMs) operating in extended multi-session settings suffer from two systemic failure modes: (1) recursive hallucination compounding, wherein unverified model-originated narration is committed to long-term memory and subsequently retrieved as established truth; and (2) fabricated action claims, wherein agents assert execution of irreversible real-wo…",
+    "highlight": "命中: large language model, llm, language model, agent, evaluation"
+  },
+  {
+    "id": "doi:10.20517/aiagent.2026.43",
+    "source": "crossref",
+    "title": "Benchmarking and fine-tuning large language models for domain-specific materials science: a case study toward GPU application",
+    "authors": [
+      "Wang Yuqin",
+      "Wang Youle",
+      "Zhang Lei"
+    ],
+    "abstract": "Despite significant progress in large language models (LLMs) with general reasoning capabilities, their adaptability remains limited in interdisciplinary domains that require specialized expertise, such as those related to cutting-edge chip fabrication in materials science. To address this gap, this study constructs a domain-specific benchmark for graphics processing unit (GPU) materials science, comprising a systematically constructed evaluation dataset and a comprehensive assessment of representative LLMs on domain-specific tasks. As part of this benchmark development, we also develop GPUmatLLM, a specialized domain language model fine-tuned on high-quality data from academic papers, patents, and other relevant sources for GPU materials science. Benchmarking results reveal a notable performance gap among the representative LLMs, with no single model excelling in both general scientific reasoning and GPU material-specific knowledge acquisition. In contrast, GPUmatLLM demonstrates improved comprehensive performance on GPU materials tasks, surpassing baseline models in domain-specific inference while maintaining competitive performance in general scientific reasoning. This work provides an effective framework and practical paradigm for benchmarking and optimizing domain-specific LLMs in specialized materials science fields.",
+    "url": "https://doi.org/10.20517/aiagent.2026.43",
+    "published": "2026-10-26",
+    "doi": "10.20517/aiagent.2026.43",
+    "journal": "AI Agent",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "benchmark",
+      "evaluation",
+      "fine-tuning"
+    ],
+    "summary_zh": "Despite significant progress in large language models (LLMs) with general reasoning capabilities, their adaptability remains limited in interdisciplinary domains that require specialized expertise, such as those related to cutting-edge chip fabrication in materials science. To address this gap, this study constructs a domain-specific benchmark for graphics processing unit (GPU) materials science, …",
+    "highlight": "命中: large language model, llm, language model, reasoning, benchmark"
+  },
+  {
+    "id": "openalex:W7223549555",
+    "source": "openalex",
+    "title": "RiskLab: A Controlled Toolkit for Probing Emergent Risks in LLM-Based Multi-Agent Systems",
+    "authors": [
+      "Yue Huang",
+      "Yu Jiang",
+      "Wenjie Wang",
+      "Yanbo Wang",
+      "Zhenhong Zhou",
+      "Xiuying Chen",
+      "Liu Yang",
+      "Pin‐Yu Chen",
+      "Wei Wang",
+      "Xiangliang Zhang"
+    ],
+    "abstract": "RiskLab is an open-source toolkit for probing, measuring, and reproducing emergent risks in large language model (LLM)-based multi-agent systems. It provides a configurable framework for defining experiments through communication topologies, environments, interaction protocols, agent configurations, and tasks. The toolkit supports multiple LLM providers, extensible risk detectors, structured trajectory logging, and quantitative evaluation of system-level risks. It enables researchers to investigate behaviors such as tacit collusion, strategic information withholding, authority deference, and semantic drift under controlled experimental conditions. This archive contains a snapshot of the RiskLab source code. The development repository is available at https://github.com/HowieHwong/RiskLab.",
+    "url": "https://doi.org/10.5281/zenodo.23636239",
+    "published": "2026-10-25",
+    "doi": "10.5281/zenodo.23636239",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "evaluation"
+    ],
+    "summary_zh": "RiskLab is an open-source toolkit for probing, measuring, and reproducing emergent risks in large language model (LLM)-based multi-agent systems. It provides a configurable framework for defining experiments through communication topologies, environments, interaction protocols, agent configurations, and tasks.",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  }
+]
