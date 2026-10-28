@@ -1,0 +1,340 @@
+[
+  {
+    "id": "openalex:W7223720797",
+    "source": "openalex",
+    "title": "Stabilizing high-nickel cathodes under high voltage through Zr/F co-doping",
+    "authors": [
+      "ZHANG Jun",
+      "Zhenguo Wu",
+      "GUO Xiaodong"
+    ],
+    "abstract": "Ni-rich cathode materials are currently widely used in electric vehicles and energy storage systems due to their high energy density. However， as nickel content increases， cycle stability deteriorates significantly. First， high-nickel materials inherently suffer from cation misalignment during high-temperature sintering and electrochemical cycling， which readily leads to the formation of non-electrochemically active rock salt phase structures. Furthermore， the extraction and insertion of lithium ions during charge-discharge cycles are often accompanied by anisotropic volume changes triggered by the H₂-H₃ phase transition， inducing particle cracking and resulting in intergranular and intragranular cracks. Subsequently， the exposure of fresh surfaces due to these cracks intensifies side reactions with the electrolyte. Particularly at high voltages of 4.6 V， deep lithium-ion deintercalation generates a large amount of highly oxidizing Ni⁴⁺ on the material surface， triggering the release of lattice oxygen. This also induces severe surface structural reorganization， leading to the formation of a thick cathode-electrolyte interphase （CEI） layer， which impedes the interfacial transport kinetics of Li⁺ and ultimately results in the mechanical and electrochemical failure of the material. To address the issue of performance degradation under high-voltage cycling， LiNi0.89Co0.05Mn0.05Al0.01O2 （NCMA-ZrF） material was prepared via zirconium-fluorine co-doping. This approach effectively mitigated capacity loss caused by structural degradation during long-term cycling and significantly improved electrochemical stability under harsh conditions such as high voltage. Zr and F elements were introduced into the material via high-temperature solid-state doping to modify its properties. The strong Zr—O bond energy effectively stabilizes the crystal lattice framework. Furthermore， the more electronegative F was utilized to synergistically reinforce the oxygen framework constructed by Zr， thereby reducing the reactivity of lattice oxygen and suppressing particle cracking and interfacial side reactions during high-voltage cycling. Consequently， the structural and interfacial stability of the material were enhanced， thereby suppressing irreversible phase transformations caused by oxygen evolution under high voltage at the source. Under testing conditions of 4.3 V， 1 C， and 30 °C， NCMA-ZrF exhibited a capacity retention rate as high as 99.97% after 100 cycles. To achieve higher energy density， the cut-off voltage was increased to 4.6 V. NCMA-ZrF still demonstrated excellent specific discharge capacity and good structural stability， with a first-cycle specific discharge capacity of 236.91 mAh/g at 0.1 C. Even after 100 cycles at 1 C， the capacity retention rate reached 81.91%. Furthermore， at 4.3 V， NCMA-ZrF demonstrated good practical performance under high-rate and high-temperature conditions： at 5 C， its specific discharge capacity reached 181.15 mAh/g， with a capacity retention rate of 95.11% after 200 cycles； even after 50 cycles at 45 °C， the capacity retention rate remained as high as 99.18%. This study utilized Zr/F co-doping to effectively enhance the structural stability of high-nickel materials， providing a new technical route for the development of next-generation high-performance lithium-ion batteries.",
+    "url": "https://openalex.org/W7223720797",
+    "published": "2026-11-01",
+    "doi": "",
+    "journal": "DOAJ (DOAJ: Directory of Open Access Journals)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "battery",
+      "batteries",
+      "lithium-ion",
+      "lithium ion",
+      "lithium",
+      "degradation"
+    ],
+    "summary_zh": "Ni-rich cathode materials are currently widely used in electric vehicles and energy storage systems due to their high energy density. However， as nickel content increases， cycle stability deteriorates significantly.",
+    "highlight": "命中: battery, batteries, lithium-ion, lithium ion, lithium"
+  },
+  {
+    "id": "openalex:W7223687460",
+    "source": "openalex",
+    "title": "Joint state of charge estimation for marine lithium-ion batteries based on FFRLS and FGO-EKF",
+    "authors": [
+      "Junjie Zhou"
+    ],
+    "abstract": "State of charge (SOC) estimation using the extended Kalman filter (EKF) frequently suffers from error divergence due to voltage observation degradation, particularly under the coupling of high-frequency dynamic ship loads and the wide voltage plateau of large-capacity lithium iron phosphate (LFP) batteries. To address this, a joint state observation method integrating forgetting factor recursive least squares (FFRLS) and a fungi growth optimization extended Kalman filter (FGO-EKF) is proposed. Based on a dynamic second-order RC equivalent circuit model, FFRLS tracks time-varying battery parameters in real time to eliminate polarization accumulation errors. Crucially, a scaling factor is introduced into the EKF's a posteriori update phase and adaptively optimized by the FGO algorithm to rationally reshape the weight distribution of degraded voltage observations. Validated with dynamic operating data from a 280 Ah marine LFP battery, the proposed FGO-EKF method suppresses the root mean square error (RMSE) to 0.635% and constrains the maximum absolute error (MaxAbs) at 1.175%. Achieving accuracy improvements of over 54% compared to the conventional EKF, this framework effectively resolves plateau-induced estimation failures while accommodating the computational limits of shipborne battery management systems.",
+    "url": "https://doi.org/10.1117/12.3129377",
+    "published": "2026-10-26",
+    "doi": "10.1117/12.3129377",
+    "journal": "",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "battery",
+      "batteries",
+      "lithium-ion",
+      "lithium",
+      "state of charge",
+      "soc",
+      "degradation",
+      "battery management"
+    ],
+    "summary_zh": "State of charge (SOC) estimation using the extended Kalman filter (EKF) frequently suffers from error divergence due to voltage observation degradation, particularly under the coupling of high-frequency dynamic ship loads and the wide voltage plateau of large-capacity lithium iron phosphate (LFP) batteries. To address this, a joint state observation method integrating forgetting factor recursive l…",
+    "highlight": "命中: battery, batteries, lithium-ion, lithium, state of charge"
+  },
+  {
+    "id": "openalex:W7223575652",
+    "source": "openalex",
+    "title": "Testing the Representational Sufficiency of Capacity-Based State of Health in Lithium-Ion Batteries",
+    "authors": [
+      "Dimitri Cerny"
+    ],
+    "abstract": "This preprint examines whether capacity-based state of health (SOH) preserves the information required for independently selected present and future battery target records. Using the public Luh–Blank, NASA Ames, and Stroebl lithium-ion battery aging datasets, the study combines matched-state analyses with held-out prediction. Closely matched capacity preserves a selected terminal-voltage record comparatively tightly but leaves greater ambiguity in reference-impedance and pulse-resistance records. In a longitudinal Luh–Blank analysis, capacity-matched present states within the same aging condition retain measurable differences in the next standardized 10-s pulse-resistance record. Adding contemporaneous electrical information to a strong capacity-history and aging-context baseline reduces held-out future-resistance prediction error by 56.25%, and by 45.38% relative to a naïve resistance-persistence forecast. An independent continuous-capacity analysis in the Stroebl dataset shows that recorded aging history also improves prediction of a selected 10-s DCIR target. By contrast, the same four-timescale pulse-resistance block does not establish improved prediction of the next standardized capacity record in a separate Luh–Blank experiment. The results support a target-relative interpretation of battery-state representation adequacy: information omitted by a capacity-based representation can remain consequential for one target while adding no established value for another. This record contains: the preprint manuscript; and the accompanying Supplementary Material. This version has not been peer reviewed. A separate reproducibility archive containing analysis code, processed result tables, verification outputs, figure-source material, and provenance records will be deposited and linked to this record.",
+    "url": "https://doi.org/10.5281/zenodo.23631760",
+    "published": "2026-10-25",
+    "doi": "10.5281/zenodo.23631760",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "battery",
+      "batteries",
+      "lithium-ion",
+      "lithium",
+      "state of health",
+      "soh",
+      "aging",
+      "impedance"
+    ],
+    "summary_zh": "This preprint examines whether capacity-based state of health (SOH) preserves the information required for independently selected present and future battery target records. Using the public Luh–Blank, NASA Ames, and Stroebl lithium-ion battery aging datasets, the study combines matched-state analyses with held-out prediction.",
+    "highlight": "命中: battery, batteries, lithium-ion, lithium, state of health"
+  },
+  {
+    "id": "openalex:W7163578857",
+    "source": "openalex",
+    "title": "3D Printed Operando Acoustic Holder for Coin Cell Batteries",
+    "authors": [
+      "Sergio Federico Mayer"
+    ],
+    "abstract": "Overview This CAD set contains the 3D printable files for a custom-designed compression holder used for operando active acoustic monitoring of coin cell batteries. The assembly is designed to securely align two ultrasonic transducers (emitter and receiver) on either side of a coin cell, maintaining consistent coupling pressure via a mechanical spring during electrochemical cycling. This setup allows for the continuous monitoring of acoustic metrics (such as Time-of-Flight and signal attenuation) to study structural and mechanical evolution within the battery. Bill of Materials (Hardware & Components) To replicate this experimental setup, the following non-printed components are required: Acoustic Sensors: 2x Ultrasonic Contact Transducers. Diameter: 19 mm (~0.75 inch). Connector: Side-mounted Microdot (10-32). Hardware: 1x CR2032-size coin cell 1x Mechanical compression spring (to maintain constant acoustic coupling pressure). 1x M10 fastening bolt (for spring tensioning). 1x M10 nut (for housing assembly, inserted as inset during the 3D print of retainer_cap). 2x Flat disks with electrical connectors (for electrochemical cycling of the cell) Coaxial cables (Microdot to BNC/SMA) connecting to the ultrasonic pulser/receiver. 3D Printing Specifications The provided 3D models (main housing, transducer carriage, and end-caps) are optimized for Fused Deposition Modeling (FDM). Material: PETG (Polyethylene Terephthalate Glycol) Infill Density: 40% Layer Height: 0.20 mm Assembly Notes The primary housing accommodates the stationary transducer at the base. The coin cell is sandwiched between this base transducer and the top transducer, which sits within a sliding carriage. The spring is sandwiched between the bottom_cap and top_cap parts, and screw assembly applies constant downward pressure onto the carriage, ensuring stable acoustic coupling throughout the charge/discharge cycle regardless of slight volumetric changes in the cell.The nut must be inserted as inset during the 3D print of the retainer_cap part.",
+    "url": "https://doi.org/10.5281/zenodo.20545485",
+    "published": "2027-06-04",
+    "doi": "10.5281/zenodo.20545485",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 13,
+    "matched": [
+      "battery",
+      "batteries",
+      "ultrasonic",
+      "acoustic",
+      "time-of-flight",
+      "monitoring"
+    ],
+    "summary_zh": "Overview This CAD set contains the 3D printable files for a custom-designed compression holder used for operando active acoustic monitoring of coin cell batteries. The assembly is designed to securely align two ultrasonic transducers (emitter and receiver) on either side of a coin cell, maintaining consistent coupling pressure via a mechanical spring during electrochemical cycling.",
+    "highlight": "命中: battery, batteries, ultrasonic, acoustic, time-of-flight"
+  },
+  {
+    "id": "openalex:W7223694417",
+    "source": "openalex",
+    "title": "Experimental investigation of transition mechanism from slight overcharge to thermal runaway in lithium-ion batteries",
+    "authors": [
+      "Gongquan Wang",
+      "Zhenkai Feng",
+      "Ping Ping",
+      "Feng Xiong",
+      "Depeng Kong"
+    ],
+    "abstract": "",
+    "url": "https://doi.org/10.1016/j.ijheatmasstransfer.2026.129779",
+    "published": "2026-10-26",
+    "doi": "10.1016/j.ijheatmasstransfer.2026.129779",
+    "journal": "International Journal of Heat and Mass Transfer",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 12,
+    "matched": [
+      "battery",
+      "batteries",
+      "lithium-ion",
+      "lithium"
+    ],
+    "summary_zh": "(该源未提供摘要，点击标题查看原文)",
+    "highlight": "命中: battery, batteries, lithium-ion, lithium"
+  },
+  {
+    "id": "doi:10.1016/j.est.2026.123682",
+    "source": "crossref",
+    "title": "Ultrasonic characterisation of lithium-ion battery cathode slurries: Monitoring post-mixing evolution and structural recovery",
+    "authors": [
+      "Guk Erdogan",
+      "Tolie Hamidreza Farhadi",
+      "Bellchambers Philip",
+      "Capener Matthew J.",
+      "Niri Mona Faraji",
+      "Marco James"
+    ],
+    "abstract": "Achieving consistent slurry quality is critical for reliable electrode manufacturing in lithium-ion batteries, yet many aspects of slurry evolution during and post mixing remain difficult to examine with currently available characterisation methods. In this work, we investigate the use of ultrasonic technology characterisation as a complementary metrology technique capable of revealing subtle changes in structural dynamics during slurry recovery and ageing. NMC – 622 cathode slurries with solid contents of 63%, 65%, and 67% were monitored acoustically under static conditions, with their recovery tracked through signal amplitude measurement. A 69% solid content formulation was also examined. However, the backwall echo reduced below the system noise floor due to strong acoustic attenuation, defining the upper detectability limit of the current pulse – echo configuration. For the first time, ultrasonic signals are employed to characterise the multi – stage post – mixing process the slurries transition through. This includes rapid early restructuring, slow consolidation and a stable plateau across the measurable solid content range. Slurries with lower solid content (i.e. 63%) demonstrated lower overall change, while higher solid content slurries (i.e. 67% and above) showed a stronger and faster recovery. Ultrasonic testing shows potential to improve our understanding of mixing quality, structural stability, and coating readiness. It can be positioned as a specialised and valuable method for improving process understanding and quality control assisting with the eventual digitalisation of electrode manufacture due to its continuous, quantitative outputs.",
+    "url": "https://doi.org/10.1016/j.est.2026.123682",
+    "published": "2026-07-21",
+    "doi": "10.1016/j.est.2026.123682",
+    "journal": "Journal of Energy Storage",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 12,
+    "matched": [
+      "battery",
+      "lithium-ion",
+      "lithium",
+      "ultrasonic",
+      "monitoring"
+    ],
+    "summary_zh": "Achieving consistent slurry quality is critical for reliable electrode manufacturing in lithium-ion batteries, yet many aspects of slurry evolution during and post mixing remain difficult to examine with currently available characterisation methods. In this work, we investigate the use of ultrasonic technology characterisation as a complementary metrology technique capable of revealing subtle chan…",
+    "highlight": "命中: battery, lithium-ion, lithium, ultrasonic, monitoring"
+  },
+  {
+    "id": "openalex:W7223682208",
+    "source": "openalex",
+    "title": "An Intelligent Cyber–Physical Framework for Electric Bus Batteries: Combining DQN Smart Charging with LSTM Digital Twins",
+    "authors": [
+      "Dragan Aleksendrić",
+      "Veljko Vučinić",
+      "Luca Seidel",
+      "Eric Sax"
+    ],
+    "abstract": "The operational reliability of electric buses depends heavily on the thermal stability and longevity of their battery packs. In urban public transit, highly dynamic driving cycles characterized by severe current surges during regenerative braking and prolonged constantcurrent charging phases induce massive localized thermal stress. Traditional battery management systems often fail to dynamically balance energy recovery with the physical constraints of cell matrices, leading to accelerated degradation and potential safety hazards. This paper proposes an integrated cyber–physical framework that merges intelligent control with advanced prognostic monitoring and predictive thermal management. The core of the control layer is a deep Q-network (DQN) agent designed for real-time smart charging and dynamic regenerative braking current limitation (smart derating). This control loop is tightly integrated with a long short-term memory (LSTM) network-based digital twin (DT) operating at the edge level to mirror complex electro-thermal dynamics and track the battery state of health (SOH). To ensure transparency and proactive thermal control, a nonlinear model predictive control (NMPC) strategy is implemented, utilizing SHapley Additive exPlanations (SHAP) to map core heat generation and dynamically adjust for internal thermal lag. The predictive NMPC-xAI loop maintained cell temperatures within a tight, optimal envelope, preventing delayed under-cooling and reducing peak temperature fluctuations",
+    "url": "https://doi.org/10.5445/ir/1000198424",
+    "published": "2026-10-26",
+    "doi": "10.5445/ir/1000198424",
+    "journal": "KITopen",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 11,
+    "matched": [
+      "battery",
+      "batteries",
+      "state of health",
+      "soh",
+      "degradation",
+      "battery management",
+      "monitoring"
+    ],
+    "summary_zh": "The operational reliability of electric buses depends heavily on the thermal stability and longevity of their battery packs. In urban public transit, highly dynamic driving cycles characterized by severe current surges during regenerative braking and prolonged constantcurrent charging phases induce massive localized thermal stress.",
+    "highlight": "命中: battery, batteries, state of health, soh, degradation"
+  },
+  {
+    "id": "doi:10.1016/j.etran.2026.100639",
+    "source": "crossref",
+    "title": "Ultrasonic sensing-based cross-domain transfer learning framework for lithium-ion battery",
+    "authors": [
+      "Li Junyi",
+      "Xu Maoshu",
+      "Shi Qionglin",
+      "Wang Sheng",
+      "Zhou Min",
+      "Wang Wei",
+      "Li Haomiao",
+      "Wang Kangli",
+      "Jiang Kai"
+    ],
+    "abstract": "",
+    "url": "https://doi.org/10.1016/j.etran.2026.100639",
+    "published": "2026-09-24",
+    "doi": "10.1016/j.etran.2026.100639",
+    "journal": "eTransportation",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 11,
+    "matched": [
+      "battery",
+      "lithium-ion",
+      "lithium",
+      "ultrasonic"
+    ],
+    "summary_zh": "(该源未提供摘要，点击标题查看原文)",
+    "highlight": "命中: battery, lithium-ion, lithium, ultrasonic"
+  },
+  {
+    "id": "doi:10.1016/j.jpowsour.2026.241783",
+    "source": "crossref",
+    "title": "Large-scale lithium-ion battery-based powerline communication channel modelling for future smart battery packs",
+    "authors": [
+      "Hao He",
+      "Higgins Matthew D.",
+      "Vincent Timothy A."
+    ],
+    "abstract": "Smart battery cells have been proposed to improve the safety of lithium-ion battery packs in Battery Electric Vehicles (BEVs) and Battery Energy Storage Systems (BESSs). Powerline Communication (PLC) offers a cable-free, scalable solution for smart cell systems, enabling key battery parameters, including temperature, voltage, and current, to be transmitted through existing electrical connections. This paper proposes a large-scale series-connected cylindrical battery-based PLC channel simulation model. Simulation results for 1S1P, 5S1P, and 8S1P configurations show excellent agreement with Vector Network Analyser measurements, validating the model. The model is then extended to 50S1P, 200S1P, 400S1P, and 1200S1P, to assess the effect of scale on PLC performance. The reconstructed channel responses are used to evaluate Bit Error Rate (BER) performance under Signal-to-Noise Ratio (SNR) conditions. The results show that 200S1P and 400S1P packs maintain reliable communication at 20 dB SNR, whereas the 1200S1P configuration suffers degradation even at 25 dB. To achieve a BER of 1 × 10 −5 , the 1200S1P, 400S1P, and 200S1P configurations require additional SNR margins of 15.751 dB, 9.602 dB, and 5.927 dB, respectively, compared with 1S1P. These findings demonstrate the feasibility of PLC for high-voltage battery systems, while highlighting the challenges of ultra-large packs for future BESSs.",
+    "url": "https://doi.org/10.1016/j.jpowsour.2026.241783",
+    "published": "2026-10-22",
+    "doi": "10.1016/j.jpowsour.2026.241783",
+    "journal": "Journal of Power Sources",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 9,
+    "matched": [
+      "battery",
+      "lithium-ion",
+      "lithium"
+    ],
+    "summary_zh": "Smart battery cells have been proposed to improve the safety of lithium-ion battery packs in Battery Electric Vehicles (BEVs) and Battery Energy Storage Systems (BESSs). Powerline Communication (PLC) offers a cable-free, scalable solution for smart cell systems, enabling key battery parameters, including temperature, voltage, and current, to be transmitted through existing electrical connections.",
+    "highlight": "命中: battery, lithium-ion, lithium"
+  },
+  {
+    "id": "doi:10.1016/j.est.2026.124788",
+    "source": "crossref",
+    "title": "Evidence-gated digital-twin benchmarking of lithium-ion battery fast-charging control using public battery data",
+    "authors": [
+      "Singh Ajay",
+      "Dhelim Sahraoui",
+      "Singh Chatter",
+      "Kumar Shakti",
+      "Singh Amar"
+    ],
+    "abstract": "",
+    "url": "https://doi.org/10.1016/j.est.2026.124788",
+    "published": "2026-09-20",
+    "doi": "10.1016/j.est.2026.124788",
+    "journal": "Journal of Energy Storage",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 9,
+    "matched": [
+      "battery",
+      "lithium-ion",
+      "lithium"
+    ],
+    "summary_zh": "(该源未提供摘要，点击标题查看原文)",
+    "highlight": "命中: battery, lithium-ion, lithium"
+  },
+  {
+    "id": "doi:10.1016/j.est.2026.124140",
+    "source": "crossref",
+    "title": "Validating a battery fault model for synthetic fault data generation for lithium-ion battery systems",
+    "authors": [
+      "Reiter Alexander",
+      "Rosenmüller Christian",
+      "Lehner Susanne",
+      "Sauer Dirk Uwe",
+      "Bohlen Oliver"
+    ],
+    "abstract": "",
+    "url": "https://doi.org/10.1016/j.est.2026.124140",
+    "published": "2026-09-09",
+    "doi": "10.1016/j.est.2026.124140",
+    "journal": "Journal of Energy Storage",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 9,
+    "matched": [
+      "battery",
+      "lithium-ion",
+      "lithium"
+    ],
+    "summary_zh": "(该源未提供摘要，点击标题查看原文)",
+    "highlight": "命中: battery, lithium-ion, lithium"
+  },
+  {
+    "id": "doi:10.1016/j.ijthermalsci.2026.111283",
+    "source": "crossref",
+    "title": "A hybrid fin–PCM battery thermal management system for cylindrical lithium-ion battery at high discharge rate",
+    "authors": [
+      "Mehedi Md Imam",
+      "Rasangika Ambagaha Hewage Dona Kalpani",
+      "Nawaz Muhammad Qasim",
+      "Ee Yit Jing",
+      "Sopian Kamaruzzaman",
+      "Suraparaju Subbarama Kousik",
+      "Akula Rajesh"
+    ],
+    "abstract": "",
+    "url": "https://doi.org/10.1016/j.ijthermalsci.2026.111283",
+    "published": "2026-08-27",
+    "doi": "10.1016/j.ijthermalsci.2026.111283",
+    "journal": "International Journal of Thermal Sciences",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 9,
+    "matched": [
+      "battery",
+      "lithium-ion",
+      "lithium"
+    ],
+    "summary_zh": "(该源未提供摘要，点击标题查看原文)",
+    "highlight": "命中: battery, lithium-ion, lithium"
+  }
+]
