@@ -149,13 +149,22 @@ class SettingsDialog(tk.Toplevel):
         self.protocol("WM_DELETE_WINDOW", self._close)
 
     def _close(self) -> None:
-        self.unbind_all("<MouseWheel>")
         self.destroy()
+
+    def destroy(self) -> None:
+        # bind_all 挂在全局 all 标签上，不随窗口销毁，所有关闭路径都要先解绑
+        self.unbind_all("<MouseWheel>")
+        super().destroy()
+
+    def _on_wheel(self, event) -> None:
+        if self._canvas.winfo_exists():
+            self._canvas.yview_scroll(int(-event.delta / 120), "units")
 
     # ---- 构造（Canvas+滚动条包裹，内容再高也不怕） ----
     def _build(self) -> None:
         pad = {"padx": 10, "pady": 4}
         canvas = tk.Canvas(self, highlightthickness=0)
+        self._canvas = canvas
         vsb = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
         canvas.configure(yscrollcommand=vsb.set)
         vsb.pack(side="right", fill="y")
@@ -166,8 +175,7 @@ class SettingsDialog(tk.Toplevel):
                  lambda _e: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.bind("<Configure>",
                     lambda e: canvas.itemconfigure(win, width=e.width))
-        self.bind_all("<MouseWheel>",
-                      lambda e: canvas.yview_scroll(int(-e.delta / 120), "units"))
+        self.bind_all("<MouseWheel>", self._on_wheel)
 
         # LLM 服务商
         ttk.Label(frm, text="LLM 服务商", font=("", 10, "bold")).grid(row=0, column=0, sticky="w", **pad)
