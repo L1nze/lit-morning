@@ -1,11 +1,13 @@
 # 本地私密配置（含密钥），首次用 `python bot.py init` 生成
 config.json
 
-# 本地运行产物：个人日报、点赞、去重库等私有数据一律不入公开仓库；
-# CI 的归档走独立目录 archive/ 与 ci-state/（见 .github/workflows/daily.yml），
-# 与本地 output/、data/ 路径互不冲突。
+# 本地/云端运行产物：个人日报、点赞、去重库等私有数据一律不入公开仓库。
+# CI 默认不向仓库回写任何运行数据（去重状态走 Actions cache，仅仓库私有可见）；
+# 确需公开归档站的用户，在仓库 Variables 配 LITZB_ARCHIVE=true 后 CI 才会提交 archive/。
 output/
 data/
+archive/
+ci-state/
 
 __pycache__/
 *.pyc

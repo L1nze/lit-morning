@@ -28,8 +28,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # 幂等 guard：当天日报已存在（如手动跑过一次）就不再重复抓取/推送/归档。
-      # CI 的归档在 archive/ 目录（本地 output/、data/ 已 gitignore，
-      # 个人日报与去重库永远不进公开仓库，CI 状态走自己的目录，互不冲突）
+      # （仅开启公开归档站时有意义：archive/ 已默认 gitignore，不开归档时本检查恒为否）
       - name: 幂等 guard（当天已生成过则跳过）
         id: guard
         run: |
@@ -41,13 +40,22 @@ jobs:
             echo "skipped=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: 恢复 CI 去重状态（上一轮归档的 seen.db / 缓存）
+      # 去重状态跨日延续：存 Actions cache（仓库私有），不提交进公开仓库。
+      # key 带 run_id 使每轮都存新快照，restore-keys 前缀匹配自动取最近一份。
+      - name: 恢复去重状态（Actions cache，不入库）
+        if: env.SKIP != 'true'
+        uses: actions/cache@v4
+        with:
+          path: data
+          key: litzb-seen-${{ github.run_id }}
+          restore-keys: litzb-seen-
+
+      # 旧版从 ci-state/ 迁移：仅在 cache 未命中（无 seen.db）时一次性拷入，避免旧盖新
+      - name: 迁移旧版 ci-state（一次性）
         if: env.SKIP != 'true'
         run: |
           mkdir -p data
-          for f in seen.db journal_rank_cache.json summary_cache.json embed_cache.json; do
-            cp -f "ci-state/$f" "data/$f" 2>/dev/null || true
-          done
+          [ -f data/seen.db ] || cp -f ci-state/seen.db data/ 2>/dev/null || true
 
       - uses: actions/setup-python@v5
         with:
@@ -75,17 +83,14 @@ jobs:
           LITZB_EXCLUDE_TERMS: ${{ secrets.LITZB_EXCLUDE_TERMS }}
         run: python bot.py today
 
-      - name: 归档到仓库（CI 专属目录 archive/ + ci-state/）
-        if: env.SKIP != 'true'   # guard 命中时跳过
+      - name: 归档到仓库（可选：公开归档站，需仓库 Variables 配 LITZB_ARCHIVE=true）
+        if: env.SKIP != 'true' && vars.LITZB_ARCHIVE == 'true'
         run: |
           git config user.name  "lit-zaobao-bot"
           git config user.email "bot@users.noreply.github.com"
-          mkdir -p archive ci-state
+          mkdir -p archive
           cp -f output/digest-*.* output/index.html output/feed.xml archive/ 2>/dev/null || true
-          for f in seen.db journal_rank_cache.json summary_cache.json embed_cache.json; do
-            cp -f "data/$f" "ci-state/$f" 2>/dev/null || true
-          done
-          git add archive ci-state || true
+          git add archive || true
           if git diff --cached --quiet; then
             echo "今日无新内容，跳过提交"
           else
@@ -107,7 +112,7 @@ jobs:
     #     若首次启用 Pages 当天恰好被跳过，次日定时跑通后自动补上，最多晚一天。
     #   B（弃用）：if: always() && !failure() && !cancelled() —— skip 时也能重发存量
     #     archive/，首次启用更即时，但每次触发都占一次部署，日常浪费大于收益。
-    if: needs.digest.result == 'success' && needs.digest.outputs.skipped != 'true'
+    if: needs.digest.result == 'success' && needs.digest.outputs.skipped != 'true' && vars.LITZB_ARCHIVE == 'true'
     runs-on: ubuntu-latest
     # Pages 部署同样限时，防止卡死烧配额
     timeout-minutes: 10

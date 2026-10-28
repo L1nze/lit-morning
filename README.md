@@ -14,7 +14,7 @@
 | 摘要 | LLM 中文三句话摘要，9 家服务商可切换、四级兜底、按论文 id 缓存（重跑不重复花钱） |
 | 个性化 | 点赞 → 关键词画像加权；配 embedding 后叠加语义加分与漏网捞回（可选） |
 | 推送 | Server酱 / PushPlus / 企业微信 / WxPusher / 邮件，主备双通道互备，超长自动分片 |
-| 归档 | 每日 HTML / Markdown / JSON + 历史导航页 + RSS，一键发布到 GitHub Pages |
+| 归档 | 每日 HTML / Markdown / JSON + 历史导航页 + RSS；发布到 GitHub Pages 为可选项（Variables 开 `LITZB_ARCHIVE`），默认运行数据不入仓库 |
 | 其他 | 周报统计、摘要双语翻译（8 引擎）、桌面 GUI（可打包 exe）、全链路自检 `doctor` |
 
 ## 快速开始
@@ -60,7 +60,7 @@ python bot.py today       # 正式跑一轮：抓取 → 筛选 → 摘要 → �
 
 ## 每天自动跑（三选一）
 
-1. **GitHub Actions（推荐，电脑完全不用开）**：推到你的 GitHub → Settings → Secrets 添加 `LITZB_SERVERCHAN_SENDKEY`（可选 `LITZB_LLM_API_KEY` / `LITZB_LLM_ACTIVE`）；**研究方向与关键词**同样走 Secrets（`config.json` 不入库）：`LITZB_RESEARCH_FOCUS` + `LITZB_TOPIC_TERMS` / `LITZB_METHOD_TERMS` / `LITZB_BONUS_TERMS` / `LITZB_EXCLUDE_TERMS`（词组逗号分隔），不配则用内置示例方向 → 每天 08:37（北京时间）自动出报并归档回仓库。再到 Settings → Pages 把 Source 设为 **GitHub Actions**，即得归档站 + RSS（把地址填进 `site_url` 生效完整版链接）。
+1. **GitHub Actions（推荐，电脑完全不用开）**：推到你的 GitHub → Settings → Secrets 添加 `LITZB_SERVERCHAN_SENDKEY`（可选 `LITZB_LLM_API_KEY` / `LITZB_LLM_ACTIVE`）；**研究方向与关键词**同样走 Secrets（`config.json` 不入库）：`LITZB_RESEARCH_FOCUS` + `LITZB_TOPIC_TERMS` / `LITZB_METHOD_TERMS` / `LITZB_BONUS_TERMS` / `LITZB_EXCLUDE_TERMS`（词组逗号分隔），不配则用内置示例方向 → 每天 08:37（北京时间）自动出报。默认**不向仓库回写任何运行数据**（去重状态存 Actions cache，仅仓库私有可见）；想要公开归档站 + RSS，再到仓库 Variables 配 `LITZB_ARCHIVE=true`、Settings → Pages 把 Source 设为 **GitHub Actions**（把站点地址填进 `site_url` 生效完整版链接）。
 2. **Windows 桌面版**：`build-exe.cmd` 打包单文件 exe，窗口里「⏰ 每日推送」一键注册计划任务，换机器拷走 exe 即部署。
 3. **命令行**：`python bot.py daemon --at 08:30` 常驻定时，或 `register-task.cmd` 注册计划任务（错过开机自动补跑）。
 
