@@ -158,7 +158,16 @@ def apply_env(raw: dict) -> dict:
 
     int_keys = {"LITZB_TOP_N", "LITZB_DAYS_LOOKBACK"}
     bool_keys = {"LITZB_PUSH_ENABLED"}
+    # 研究方向与关键词（词组逗号分隔，兼容中文逗号/空项）：config.json 不进公开仓库，
+    # 云端(CI)的方向由此注入；Secrets 不配则维持本地文件或内置默认，向后兼容。
+    list_keys = {"LITZB_TOPIC_TERMS", "LITZB_METHOD_TERMS",
+                 "LITZB_BONUS_TERMS", "LITZB_EXCLUDE_TERMS"}
     overrides = {
+        "LITZB_RESEARCH_FOCUS": ("research_focus",),
+        "LITZB_TOPIC_TERMS": ("keywords", "topic_terms"),
+        "LITZB_METHOD_TERMS": ("keywords", "method_terms"),
+        "LITZB_BONUS_TERMS": ("keywords", "bonus_terms"),
+        "LITZB_EXCLUDE_TERMS": ("keywords", "exclude_terms"),
         "LITZB_SERVERCHAN_SENDKEY": ("push", "serverchan_sendkey"),
         "LITZB_PUSHPLUS_TOKEN": ("push", "pushplus_token"),
         "LITZB_PUSH_PROVIDER": ("push", "provider"),
@@ -191,6 +200,10 @@ def apply_env(raw: dict) -> dict:
                 continue
         elif env_key in bool_keys:
             val = val.strip().lower() in ("1", "true", "yes", "on")
+        elif env_key in list_keys:
+            val = [t.strip() for t in val.replace("，", ",").split(",") if t.strip()]
+            if not val:
+                continue  # 全是空白/逗号的 Secret 视为未配置，不覆盖
         node = raw
         for key in path[:-1]:
             node = node.setdefault(key, {})

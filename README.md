@@ -60,7 +60,7 @@ python bot.py today       # 正式跑一轮：抓取 → 筛选 → 摘要 → �
 
 ## 每天自动跑（三选一）
 
-1. **GitHub Actions（推荐，电脑完全不用开）**：推到你的 GitHub → Settings → Secrets 添加 `LITZB_SERVERCHAN_SENDKEY`（可选 `LITZB_LLM_API_KEY` / `LITZB_LLM_ACTIVE`）→ 每天 08:37（北京时间）自动出报并归档回仓库。再到 Settings → Pages 把 Source 设为 **GitHub Actions**，即得归档站 + RSS（把地址填进 `site_url` 生效完整版链接）。
+1. **GitHub Actions（推荐，电脑完全不用开）**：推到你的 GitHub → Settings → Secrets 添加 `LITZB_SERVERCHAN_SENDKEY`（可选 `LITZB_LLM_API_KEY` / `LITZB_LLM_ACTIVE`）；**研究方向与关键词**同样走 Secrets（`config.json` 不入库）：`LITZB_RESEARCH_FOCUS` + `LITZB_TOPIC_TERMS` / `LITZB_METHOD_TERMS` / `LITZB_BONUS_TERMS` / `LITZB_EXCLUDE_TERMS`（词组逗号分隔），不配则用内置示例方向 → 每天 08:37（北京时间）自动出报并归档回仓库。再到 Settings → Pages 把 Source 设为 **GitHub Actions**，即得归档站 + RSS（把地址填进 `site_url` 生效完整版链接）。
 2. **Windows 桌面版**：`build-exe.cmd` 打包单文件 exe，窗口里「⏰ 每日推送」一键注册计划任务，换机器拷走 exe 即部署。
 3. **命令行**：`python bot.py daemon --at 08:30` 常驻定时，或 `register-task.cmd` 注册计划任务（错过开机自动补跑）。
 

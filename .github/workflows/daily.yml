@@ -66,6 +66,13 @@ jobs:
           LITZB_RANK_PROVIDER: ${{ secrets.LITZB_RANK_PROVIDER }}
           LITZB_EASYSCHOLAR_KEY: ${{ secrets.LITZB_EASYSCHOLAR_KEY }}
           LITZB_ONESCHOLAR_KEY: ${{ secrets.LITZB_ONESCHOLAR_KEY }}
+          # 研究方向与关键词（逗号分隔词组）：config.json 不入库，云端方向走 Secrets；
+          # 全部可选——不配置则用内置默认方向（开源示例），对其他用户零改动。
+          LITZB_RESEARCH_FOCUS: ${{ secrets.LITZB_RESEARCH_FOCUS }}
+          LITZB_TOPIC_TERMS: ${{ secrets.LITZB_TOPIC_TERMS }}
+          LITZB_METHOD_TERMS: ${{ secrets.LITZB_METHOD_TERMS }}
+          LITZB_BONUS_TERMS: ${{ secrets.LITZB_BONUS_TERMS }}
+          LITZB_EXCLUDE_TERMS: ${{ secrets.LITZB_EXCLUDE_TERMS }}
         run: python bot.py today
 
       - name: 归档到仓库（CI 专属目录 archive/ + ci-state/）

@@ -65,6 +65,25 @@ class TestApplyEnv(unittest.TestCase):
             out = apply_env({"llm": {"api_key": "keep"}})
         self.assertEqual(out["llm"]["api_key"], "keep")
 
+    def test_env_research_direction(self):
+        # 方向与关键词组：逗号分隔（兼容中文逗号），空项剔除；未给的分组保持原值
+        raw = {"keywords": {"topic_terms": ["keep"], "bonus_terms": ["b1"]}}
+        with patch.dict(os.environ, {"LITZB_RESEARCH_FOCUS": "超声监测×锂电池",
+                                     "LITZB_TOPIC_TERMS": "battery, lithium-ion ，lithium",
+                                     "LITZB_METHOD_TERMS": "ultrasound,,acoustic"}):
+            out = apply_env(raw)
+        self.assertEqual(out["research_focus"], "超声监测×锂电池")
+        self.assertEqual(out["keywords"]["topic_terms"],
+                         ["battery", "lithium-ion", "lithium"])
+        self.assertEqual(out["keywords"]["method_terms"], ["ultrasound", "acoustic"])
+        self.assertEqual(out["keywords"]["bonus_terms"], ["b1"])
+
+    def test_env_terms_blank_secret_ignored(self):
+        # 全是空白/逗号的 Secret 视为未配置，不覆盖已有关键词
+        with patch.dict(os.environ, {"LITZB_TOPIC_TERMS": " , ，"}):
+            out = apply_env({"keywords": {"topic_terms": ["keep"]}})
+        self.assertEqual(out["keywords"]["topic_terms"], ["keep"])
+
 
 class TestLegacyKeyCompat(unittest.TestCase):
     """旧版配置键名（已弃用）在加载时归一化为新名，用户零迁移。"""
