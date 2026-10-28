@@ -1,0 +1,371 @@
+[
+  {
+    "id": "openalex:W7223702342",
+    "source": "openalex",
+    "title": "AGI Blueprint",
+    "authors": [
+      "Saket Solutions"
+    ],
+    "abstract": "Current frontier language models and autonomous agentic frameworks suffer from fundamental structural vulnerabilities when operating in recursive, autonomous, or long-horizon deployment environments. Monolithic parameter scaling and unconstrained probabilistic execution lead directly to systemic failure modes—including epistemic drift, silent context corruption, specification gaming, and unverified execution loops.The AGI-Blueprint-Macro-OS introduces a system-level operating framework designed to govern multi-agent reasoning through non-probabilistic hard verification gates and deterministic environment grounding. Rather than relying on autoregressive probability for state validation, the architecture decouples execution into a modular 7-LLM orchestrator topology governed by formal verification primitives. Key Architectural Sub-SystemsTask-Oriented Large Language Model Kernel (TOLLM - LLM-1): Acts as the central Directed Acyclic Graph (DAG) planner and execution coordinator. It transforms high-level ambiguous goals into role-isolated sub-routines bound by explicit JSON-RPC schema contracts, eliminating free-form conversational ambiguity.Dual-Program Synthesis Unit (DPSU - LLM-2 & LLM-3): Implements a strict operational decoupling between candidate logic generation ($P_1$) and deterministic static verification ($P_2$). Candidate code, plans, or formal proofs produced by $P_1$ are held in an ephemeral buffer until verified by $P_2$ through non-probabilistic static analysis, unit test assertions, and abstract syntax tree (AST) validation before committing to memory or disk.Advanced Computational Engineering Unit (ACEU): Provides non-neural, ground-truth simulation grounding by interfacing reasoning outputs directly with external deterministic solvers, symbolic algebra systems, and physical simulation engines (e.g., OpenFOAM, SymPy, or custom binaries). This ensures physical and mathematical fidelity, rendering hallucinated tool calls impossible.Multimodal Perception Engine (MPE): Converts multi-sensor array feeds, visual environments, and structured database state vectors into standardized canonical state representations prior to downstream LLM processing.Recursive Self-Improvement & Anti-Cheating Auditor: Monitors system-level self-modification loops. It utilizes static AST auditing and execution trace inspection to detect and intercept synthetic shortcuts, token-range truncation, and specification gaming during autonomous optimization phases.Comprehensive 14-Point Structural Failure MatrixThe AGI-Blueprint-Macro-OS provides formal mathematical descriptions, systemic root-cause diagnoses, and explicit architectural mitigations for 14 foundational failure modes present in autonomous AI agents:Epistemic Drift & Hallucination Accumulation: Gradual divergence from ground truth in multi-turn reasoning chains. Mitigation: DPSU hard verification prior to memory commits.Specification Gaming & Reward Hacking: Exploitation of evaluation proxies via unintended operational shortcuts. Mitigation: Static AST-level trace validation.Silent Context & Memory Corruption: Degradation of dynamic state vectors over extended operational horizons. Mitigation: Immutable DAG state logging and deterministic rollback checkpoints.Unconstrained Tool Execution Drift: Cascading system failures caused by unvalidated API calls or code executions. Mitigation: ACEU environment sandboxing and schema enforcement.Token-Range Truncation & Information Loss: Loss of critical context due to fixed input/output sequence limits. Mitigation: Structured DAG state serialization and semantic compression.Probabilistic Decision Lock-In: Entrenchment of sub-optimal early trajectory choices due to greedy decoding. Mitigation: Multi-candidate branch generation with hard verification filtering.Cross-Agent Communication Degradation: Semantic noise accumulation across inter-agent messaging pipelines. Mitigation: Strict JSON-RPC interface contracts replacing natural language chat logs.Infinite Execution & Recursion Loops: Non-terminating agentic sub-routines causing resource exhaustion. Mitigation: Maximum execution-depth bounds and deterministic halt conditions.Ontological & Schema Mismatch: Failure to map abstract model outputs onto concrete real-world databases or APIs. Mitigation: MPE canonical state transformation layer.Unverified Capability Escalation: Unchecked agent modifications altering core operating safety parameters. Mitigation: Hardened core kernel kernel-space / user-space operational isolation.Catastrophic Forgetting during Online Adaptation: Loss of core foundational knowledge during domain-specific execution. Mitigation: Decoupled parametric core with externalized operational memory.Adversarial & Environment Manipulation Vulnerability: Susceptibility to unexpected external state manipulation during active execution. Mitigation: Hardened input-validation boundaries and deterministic sanitization gates.Temporal Reasoning & Sequence Inversion: Errors in sequencing multi-dependent operations over time. Mitigation: Formal DAG dependency trees enforced by the TOLLM kernel.Silent Failure in Multi-Modal Grounding: Misalignment between textual reasoning outputs and real-world spatial or physical constraints. Mitigation: Real-time physics engine and symbolic solver grounding via ACEU.---Repository & Citation InformationPrimary Repository: https://github.com/Saketsolutions/AGI-Blueprint-Macro-OS",
+    "url": "https://doi.org/10.5281/zenodo.23665489",
+    "published": "2026-10-26",
+    "doi": "10.5281/zenodo.23665489",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 19,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "reasoning",
+      "evaluation",
+      "hallucination",
+      "memory",
+      "multimodal"
+    ],
+    "summary_zh": "Current frontier language models and autonomous agentic frameworks suffer from fundamental structural vulnerabilities when operating in recursive, autonomous, or long-horizon deployment environments. Monolithic parameter scaling and unconstrained probabilistic execution lead directly to systemic failure modes—including epistemic drift, silent context corruption, specification gaming, and unverifie…",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "openalex:W7223688612",
+    "source": "openalex",
+    "title": "Perspective Chapter: Governing the Autonomous Fortress – Multi-Agent AI Systems for Secure and Resilient Cloud Cybersecurity",
+    "authors": [
+      "RAVI PRASAD",
+      "Raj Patel",
+      "Feroz Ahmed",
+      "Aditya Garg",
+      "Charan Gudla"
+    ],
+    "abstract": "Cybersecurity is changing from reactive, human-centered systems to highly autonomous cyber-capable agents (HACCAs) that can operate at machine speed and scale. This chapter introduces the Autonomous Fortress, an architectural framework that changes artificial intelligence from a tool that only supports analysis into a system that can make decisions, plan multiple steps, use different tools, and improve its actions through continuous reasoning. The core of the Autonomous Fortress is a large language model (LLM)-based multi-agent system (MAS). In this system, specialized agents for perception, correlation, analysis, and response work together as digital teammates to protect the environment. The framework combines different coordination methods, including a hierarchical supervisor model and swarm-based dynamic handoff, to support adaptive and context-aware decision-making. This approach goes beyond traditional machine learning systems that mainly depend on fixed rules and pattern matching. Although these secure-by-design mechanisms improve the defender’s ability to respond to cyber threats, high levels of autonomy also introduce new risks, such as prompt injection, memory poisoning, and cascading system failures. Based on national cybersecurity strategies and enterprise deployments from 2025 to 2026, this chapter presents both a technical and governance roadmap for building secure and resilient autonomous cyber defense systems in modern digital and cloud-native environments.",
+    "url": "https://doi.org/10.5772/intechopen.1017734",
+    "published": "2026-10-26",
+    "doi": "10.5772/intechopen.1017734",
+    "journal": "IntechOpen eBooks",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 16,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "multi-agent",
+      "reasoning",
+      "memory"
+    ],
+    "summary_zh": "Cybersecurity is changing from reactive, human-centered systems to highly autonomous cyber-capable agents (HACCAs) that can operate at machine speed and scale. This chapter introduces the Autonomous Fortress, an architectural framework that changes artificial intelligence from a tool that only supports analysis into a system that can make decisions, plan multiple steps, use different tools, and im…",
+    "highlight": "命中: large language model, llm, language model, agent, multi-agent"
+  },
+  {
+    "id": "arxiv:2610.37202v1",
+    "source": "arxiv",
+    "title": "3D-SceneQ: Empowering 3D LLM With Query-Guided Adaptive Pruning and Multi-Modal Feature Enhancement",
+    "authors": [
+      "Yongqi Shan",
+      "Lu Zhang",
+      "Jiazuo Yu",
+      "Yunzhi Zhuge",
+      "Huchuan Lu"
+    ],
+    "abstract": "Current 3D scene understanding pipelines typically concatenate vast numbers of 3D object tokens with text tokens and feed the resulting sequence to a Large Language Model (LLM). However, existing 3D-LLMs for scene understanding encounter two major limitations: (i) excessive inclusion of task-irrelevant object data, introducing noise that reduces reasoning accuracy and increases hallucinations; and (ii) reliance solely on point cloud data, which inherently lacks the rich semantic information available in complementary 2D modalities, such as color, material properties, texture, and high-level contextual relationships. To address these challenges, we introduce 3D-SceneQ, a 3D LLM that unifies adaptive token pruning with multimodal semantic enrichment, markedly advancing scene understanding, reasoning, and grounding. Specifically, we propose a Query-Guided Adaptive Pruning (QGAP) module that adaptively selects task-relevant objects based on the intended meaning of user instructions, leveraging a learnable latent query to retain critical information while effectively suppressing irrelevant noise. In addition, we introduce a Multi-modal Object-level Feature Enhancement (MOFE) module, which integrates 2D feature embeddings from pre-trained models into 3D representation to enrich object-level semantic information. Evaluations show that 3D-SceneQ outperforms current state-of-the-art methods across multiple benchmarks (e.g., +5.7 CIDEr on Scan2Cap and +17.0 EM@1 on SQA3D), demonstrating its remarkable capabilities in various 3D language reasoning tasks.",
+    "url": "https://arxiv.org/abs/2610.37202v1",
+    "published": "2026-10-27",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "benchmark",
+      "evaluation",
+      "hallucination",
+      "multimodal"
+    ],
+    "summary_zh": "Current 3D scene understanding pipelines typically concatenate vast numbers of 3D object tokens with text tokens and feed the resulting sequence to a Large Language Model (LLM). However, existing 3D-LLMs for scene understanding encounter two major limitations: (i) excessive inclusion of task-irrelevant object data, introducing noise that reduces reasoning accuracy and increases hallucinations; and…",
+    "highlight": "命中: large language model, llm, language model, reasoning, benchmark"
+  },
+  {
+    "id": "arxiv:2610.36584v1",
+    "source": "arxiv",
+    "title": "Benchmarking LLM Agents for Behaviorally Adequate Test Generation from Software Requirements",
+    "authors": [
+      "Binhang Qi",
+      "Yiming Liu",
+      "Yun Lin",
+      "Yangjie Zhou",
+      "Hailong Sun",
+      "Jin Song Dong"
+    ],
+    "abstract": "As large language model agents increasingly compile natural-language requirements into repository-level code, requirement-to-test generation grows in importance to provide validation constraints (or harness) to guide code generation. Yet it remains unclear whether current agents can generate tests that validate the required behavior when the implementation of that behavior is withheld. Existing test-generation benchmarks mostly focus on white-box testing, whereas the requirement--test-related study usually requires evaluation on semantic alignment between the given documents and the generated tests. We introduce Req2Test-Bench, a benchmark containing 5,086 execution-validated instances recovered from developer-authored behavior-driven development (BDD) artifacts in 8 open-source projects, spanning 5 programming languages and 4 BDD frameworks. Each instance pairs a natural-language requirement in Gherkin with its developer-written Test Implementation. Given the requirement, target interfaces of the required behavior, an agent must generate a complete, potentially multi-file Test Implementation. Evaluation of 8 agent--model--reasoning configurations reveals a substantial gap between execution success and behavioral adequacy, which is measured strictly as kill-completeness: a kill-complete test kills every mutant that the ground-truth test kills. The best-performing configuration, Codex with DeepSeek-V4.1-Flash, produces passing tests for 82.8% of instances, yet only 33.8% are behaviorally adequate. We find that (1) scaling up agents yields sharply diminishing returns in behavioral adequacy relative to generation cost; (2) under-specified requirements cause the information gap, including ambiguous setup and implicit expected outcomes; and (3) requirement-grounded harnesses that steer agent non-determinism offer a promising direction for improvement.",
+    "url": "https://arxiv.org/abs/2610.36584v1",
+    "published": "2026-10-27",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "benchmark",
+      "evaluation"
+    ],
+    "summary_zh": "As large language model agents increasingly compile natural-language requirements into repository-level code, requirement-to-test generation grows in importance to provide validation constraints (or harness) to guide code generation. Yet it remains unclear whether current agents can generate tests that validate the required behavior when the implementation of that behavior is withheld.",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "openalex:W7223656474",
+    "source": "openalex",
+    "title": "QDAS Brain™: A Closed-Loop Sparse Associative Memory, Token Compression, and Autonomous Agent Arbitration Gateway — Empirical Benchmark at N = 10,000 Memories and Independent Multi-Model Systems",
+    "authors": [
+      "Dr Akshay Honrao, BDS,PGDIP(Orthodontics)"
+    ],
+    "abstract": "Large Language Models (LLMs) and autonomous tool-using agents (such as OpenClaw and Claude Code ) suffer from threefundamental systems bottlenecks during extended operation: (1) Context Rot, the progressive degradation of factual recall,temporal rule tracking, and safety policy compliance as historical scrollback and noisy tool logs accumulate in the prompt; (2)Linear-to-Quadratic Token Inflation, where standard chat APIs re-transmit the entire conversation history on every turn (O(n)prompt token accumulation and O(n²) attention compute) while frontier reasoning models consume hundreds of output tokens perturn; and (3) Open-Loop Unverified Execution, where conventional Retrieval-Augmented Generation (RAG) acts solely as apassive pre-generation filter with no post-generation causal verification or destructive tool-call veto. This paper presents the blackbox systems architecture, mathematical formulation, live Teacher–Student gateway telemetry, N = 10,000-document ablationbenchmarks, and independent multi-model peer assessments of QDAS Brain™ (Quantum-Dynamic Associative SynapticEngine). Operating as an external five-stage associative memory and closed-loop arbitration controller (685 Q-SPC SensoryProjection Channels → 5,177 Q-SAC Sparse Associative Cores gated by 2 Q-HIG Homeostatic Inhibitory Gates at 96.14%structural sparsity → 331 Q-NCU Neuromodulatory Consolidation Units with inverse-frequency synaptic habituation → QUBOComplementary Sub-Engram Selector → 96 Q-ARU [behavioral control of autonomous destructive database wipes); (iii) 56 ACH Excitatory / 23 GLUT Modulatory / 17 GABA Inhibitory] ContinuousStatevector Arbiter), QDAS Brain™ demonstrates: (i) 96.93% dynamic pre-cognitive syntax compression (10 tokens) with 100% grammatical closure and constant O(1) prompt tokens (326 → 88 → 30 →~529 tokens); (ii) real-time remoteOpenClaw agents (`141/200` Q-SAC overlap + `96 Q-ARU` Policy Gate intercepting30/30 (100.0% , 95% CI: 88.4%–100.0% ) accuracy at N = 10,000 documents across bothSmolLM2-135M (135M) and Qwen2.5-7B-Instruct (7.62B) at 24.24 ms p50 latency and independent validation by four frontier AI model families (OpenAI 0 MB embedding VRAM; and (iv)GPT-5.6-Luna , DeepSeek DeepSeek-V4-Pro-Max ,Anthropic Claude Mythos Preview , and Google Gemini ).",
+    "url": "https://doi.org/10.5281/zenodo.23656207",
+    "published": "2026-10-26",
+    "doi": "10.5281/zenodo.23656207",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "benchmark",
+      "memory"
+    ],
+    "summary_zh": "Large Language Models (LLMs) and autonomous tool-using agents (such as OpenClaw and Claude Code ) suffer from threefundamental systems bottlenecks during extended operation: (1) Context Rot, the progressive degradation of factual recall,temporal rule tracking, and safety policy compliance as historical scrollback and noisy tool logs accumulate in the prompt; (2)Linear-to-Quadratic Token Inflation,…",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "openalex:W7223684159",
+    "source": "openalex",
+    "title": "Scaling GPU KV-Cache Efficiency and Inference Concurrency for Autonomous Agents with HashedContext",
+    "authors": [
+      "Rahat Hasan"
+    ],
+    "abstract": "Autonomous agentic coding systems routinely transmit source files to Large Language Models (LLMs) across multi-turn software development workflows. In conventional architectures, unchanged files are re-read from storage and redundantly re-serialized into append-only conversation histories on every interaction step. This produces an asymptotic token growth of O(M × N × P), which severely exacerbates the GPU High-Bandwidth Memory (HBM) “memory wall” by saturating key-value (KV) cache allocations and degrading multi-tenant serving concurrency. We introduce HashedContext, a content-addressed context architecture that eliminates redundant file transmission and optimizes physical KV-cache utilization across multi-turn agent sessions. HashedContext couples four complementary mechanisms: (1) SHA-256 hash-gated file state tracking, (2) historical conversation deduplication via compact references ([HASH_STUB]), (3) attention-anchored authoritative tail rebasing, and (4) on-demand historical state resolution from a local content-addressed vault, and supports a bimodal deployment topology operable either edge-natively within client editors or transparently at server-side inference gateways. Empirical evaluations on production inference endpoints (DeepSeek V4) demonstrate an immediate 57.7% to 67.2% reduction in active prompt tokens on basic 4-to-5 turn workflows, with asymptotic savings mathematically bounded to 90%–97% on extended multi-file refactoring sessions. We observe no detectable degradation in model reasoning accuracy or diff resolution fidelity.",
+    "url": "https://doi.org/10.5281/zenodo.23668957",
+    "published": "2026-10-26",
+    "doi": "10.5281/zenodo.23668957",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 15,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "evaluation",
+      "memory"
+    ],
+    "summary_zh": "Autonomous agentic coding systems routinely transmit source files to Large Language Models (LLMs) across multi-turn software development workflows. In conventional architectures, unchanged files are re-read from storage and redundantly re-serialized into append-only conversation histories on every interaction step.",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.37471v1",
+    "source": "arxiv",
+    "title": "PerceptRL: Making Visual Perception Rewardable in MLLMs from Answers to Interactions",
+    "authors": [
+      "Tongkun Guan",
+      "Zhibo Yang",
+      "Mingkun Yang",
+      "Haocheng Wang",
+      "Wei Shen",
+      "Xiaokang Yang"
+    ],
+    "abstract": "Fine-grained visual perception remains a bottleneck during post-training of multimodal large language models (MLLMs), as perceptual errors can constrain gains from reasoning-focused optimization. Although image-caption pre-training improves perception, its influence can weaken as subsequent stages change data mixtures and objectives. Continuing caption supervision during post-training is challenging because subjective, information-dense descriptions complicate verifiable reward design. We present PerceptRL, which strengthens perception at two complementary levels. Perception RL uses a multi-agent pipeline to extract verified errors from dense image captions and convert the corresponding visual facts into QA pairs with fixed answer labels and rule-based rewards. Chain QA links correlated errors, while multiple-choice QA combines unrelated errors. A specialized route targets high-error domains with tailored verification, and a domain-agnostic general route covers errors beyond these domains. Perception Agentic RL addresses fine-grained and dense cases unresolved by single-turn Perception RL through multi-turn inspection with visual tools. We observe coordinate drift even in models trained to use tools, where incorrect crops or annotations distort evidence and propagate errors. Coordinate Injection corrects spatial operations in cold-start trajectories, while a grounding-aware process reward supervises intermediate spatial fidelity alongside final-answer correctness. Training proceeds through shared cold-start SFT, single-turn Perception RL, and multi-turn Perception Agentic RL. Across seven benchmarks under a shared tool-use protocol, PerceptRL achieves 71.6% average accuracy, surpassing the base model with the same tools and the strongest evaluated frontier VLM by 15.7 and 5.2 percentage points, respectively.",
+    "url": "https://arxiv.org/abs/2610.37471v1",
+    "published": "2026-10-27",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "language model",
+      "agent",
+      "multi-agent",
+      "reasoning",
+      "benchmark",
+      "multimodal"
+    ],
+    "summary_zh": "Fine-grained visual perception remains a bottleneck during post-training of multimodal large language models (MLLMs), as perceptual errors can constrain gains from reasoning-focused optimization. Although image-caption pre-training improves perception, its influence can weaken as subsequent stages change data mixtures and objectives.",
+    "highlight": "命中: large language model, language model, agent, multi-agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.36890v1",
+    "source": "arxiv",
+    "title": "Latent Residual Reasoning for Ranking in Generative Recommendation",
+    "authors": [
+      "Haihan Shi",
+      "Ruidong Han",
+      "Wenjie Wang",
+      "Shangyu Chen",
+      "Sunhao Dai",
+      "Yongqi Li",
+      "Yangyang Li",
+      "Fei Jiang",
+      "Wei Lin",
+      "Fuli Feng",
+      "Xiangnan He"
+    ],
+    "abstract": "Generative recommendation (GR) models for ranking typically adopt a fast-thinking direct prediction paradigm with strong practical efficiency. However, ranking requires fine-grained scoring across multiple candidate items, while existing GR models still mainly rely on one-shot prediction. This raises the question whether additional inference-time computation can further improve ranking quality. Recently, inspired by Chain-of-Thought (CoT) reasoning in large language models (LLMs), some work has begun to introduce reasoning into recommendation systems. Some of these methods rely on LLM reasoning frameworks to perform explicit reasoning in textual space, but such designs are not suitable for more widely deployed non-textual recommendation models. A more relevant direction is to introduce latent reasoning into ID-based recommendation models. Although recent work has extended latent reasoning to industrial ranking, how successive reasoning steps should improve fine-grained candidate scores remains less explored. To address this problem, we propose Refiner, a latent residual reasoning framework with parameter-efficient fine-tuning for generative ranking. Our approach introduces three key components: (1) a residual reasoning mechanism that progressively refines ranking scores through cumulative additive corrections, (2) history queries that provide condensed user behavior representations to enhance candidate-specific reasoning, and (3) a parameter-efficient fine-tuning strategy that leverages LoRA modules to adapt pre-trained models for latent reasoning. Extensive experiments on two public benchmarks, an offline industrial dataset, and an online A/B test demonstrate that Refiner consistently improves over direct prediction, validating its effectiveness and practical utility.",
+    "url": "https://arxiv.org/abs/2610.36890v1",
+    "published": "2026-10-27",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "benchmark",
+      "fine-tuning",
+      "chain-of-thought"
+    ],
+    "summary_zh": "Generative recommendation (GR) models for ranking typically adopt a fast-thinking direct prediction paradigm with strong practical efficiency. However, ranking requires fine-grained scoring across multiple candidate items, while existing GR models still mainly rely on one-shot prediction.",
+    "highlight": "命中: large language model, llm, language model, reasoning, benchmark"
+  },
+  {
+    "id": "arxiv:2610.36711v1",
+    "source": "arxiv",
+    "title": "PrivacyEvalClaw: A Tool-Augmented Deliberative Agent for Auditing Privacy Leakage in LLM Jailbreak Responses",
+    "authors": [
+      "Krishna Kanth Nakka",
+      "Yujun Wang",
+      "Shijie Zhou",
+      "Tu Nguyen",
+      "Gabriele Gelardi",
+      "Xuebing Zhou"
+    ],
+    "abstract": "Reliable evaluation is a critical bottleneck in privacy red-teaming of large language models (LLMs): determining whether a jailbreak response actually reveals personal information can be difficult when disclosures are indirect, contextual, partial, or obfuscated. Existing evaluation approaches increasingly rely on guard models and LLM-as-Judges, yet these evaluators may interpret the same response differently. To better characterize this evaluation setting, we conduct a systematic study of privacy evaluators and find substantial disagreement, particularly in ambiguous cases that require additional evidence or targeted analysis to resolve. Motivated by these findings, we introduce \\textsc{PrivacyEvalClaw}, a training-free deliberative agent for evaluating privacy leakage in LLM jailbreak responses. Rather than relying on isolated single-pass judgments, PrivacyEvalClaw treats evaluators and analysis modules as tools, adaptively gathers evidence, investigates uncertain disclosures, and reconciles conflicting signals before producing a final judgment. Our primary experiments use pairwise LLM-as-Judge evaluation of complete trajectories, showing that PrivacyEvalClaw achieves favorable win rates against competing baselines across outcome, process, and overall quality, while producing explicit reasoning traces that make the evaluation process more transparent and auditable.",
+    "url": "https://arxiv.org/abs/2610.36711v1",
+    "published": "2026-10-27",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "agent",
+      "reasoning",
+      "evaluation"
+    ],
+    "summary_zh": "Reliable evaluation is a critical bottleneck in privacy red-teaming of large language models (LLMs): determining whether a jailbreak response actually reveals personal information can be difficult when disclosures are indirect, contextual, partial, or obfuscated. Existing evaluation approaches increasingly rely on guard models and LLM-as-Judges, yet these evaluators may interpret the same response…",
+    "highlight": "命中: large language model, llm, language model, agent, reasoning"
+  },
+  {
+    "id": "arxiv:2610.36578v1",
+    "source": "arxiv",
+    "title": "AudioRSI: Recursively Self-Improving Audio Reasoners",
+    "authors": [
+      "Jiajun Fan",
+      "Roger Ren",
+      "Jingyuan Li",
+      "Rahul Pandey",
+      "Prashanth Gurunath Shivakumar",
+      "Ankur Gandhe",
+      "Yile Gu",
+      "Ge Liu",
+      "Ivan Bulyko"
+    ],
+    "abstract": "Reinforcement learning has made Audio Large Language Models (Audio LLMs) better reasoners, but the reward that drives it still comes from outside the model: a final-answer check, a hand-crafted process score, or an external LLM judge that stays fixed while the policy improves. We show that an Audio LLM can supply this reward itself, and can do so recursively: each improved model becomes the critic that trains its successor, so the training signal improves along with the model. We introduce AudioRSI (Recursively Self-Improving Audio Reasoners), a reinforcement learning framework in which a single model plays two roles: as an actor it generates reasoning paths, and as a critic it compares them pairwise, turning its own judgments into a process-level reward. The critic is periodically replaced by the current policy, which closes the recursive loop. Because the critic hears the same recording as the actor, it can reject reasoning that cites acoustic evidence the audio does not contain, rather than reward reasoning that merely sounds plausible. The recursion is what sustains progress: under a frozen external judge, out-of-distribution accuracy plateaus during training, while a critic refreshed from the improving policy keeps it rising. Across four out-of-distribution benchmarks, all disjoint from the AVQA training distribution, AudioRSI outperforms strong baselines including Audio Flamingo 3 and Gemini 2.5 Pro on MMAU test-mini, ranks first on MMSU, achieves a clear lead on the challenging Multi-Audio split of MMAU-Pro, and leads the 7B open-source tier on MMAR among methods without external reward models. With no reward specifying how to reason, AudioRSI also develops structured reasoning behaviors (logical reasoning, perception-aware analysis, and reduced hallucination), corroborated by an external LLM-as-Judge evaluation and a keyword-based behavior analysis.",
+    "url": "https://arxiv.org/abs/2610.36578v1",
+    "published": "2026-10-27",
+    "doi": "",
+    "journal": "arXiv 预印本",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "benchmark",
+      "evaluation",
+      "hallucination"
+    ],
+    "summary_zh": "Reinforcement learning has made Audio Large Language Models (Audio LLMs) better reasoners, but the reward that drives it still comes from outside the model: a final-answer check, a hand-crafted process score, or an external LLM judge that stays fixed while the policy improves. We show that an Audio LLM can supply this reward itself, and can do so recursively: each improved model becomes the critic…",
+    "highlight": "命中: large language model, llm, language model, reasoning, benchmark"
+  },
+  {
+    "id": "openalex:W7223651246",
+    "source": "openalex",
+    "title": "IoT-enabled multimodal large language model-based framework for compositional food recognition, nutrient profiling, NOVA classification, and cancer risk mitigation",
+    "authors": [
+      "Zebang He",
+      "Steve W. Y. Mung",
+      "Peggy Pui Lai Or",
+      "Chetwyn C. H. Chan"
+    ],
+    "abstract": "Background Automated dietary assessment increasingly struggles to evaluate industrial food processing levels, revealing a systemic gap between the visual presentation of meals and their underlying ultra-processed food composition. Although existing dietary monitoring tools can effectively track caloric and macronutrient intake, they lack the qualitative processing assessments required to identify hidden additives and map dietary risk triage quadrants. Methods This study introduces a modular, IoT-enabled multimodal dietary decision-support framework that decouples visual food recognition, standardized database retrieval, and qualitative language reasoning for automated NOVA processing classification and 2D decision matrix mapping. Operating on isolated single-dish meal instances, the system employs a four-phase cascaded pipeline that integrates vision-language models, database retrieval, and large language models (LLMs) with strict JSON schema enforcement. The platform was evaluated using the Nutrition-NOVA validation benchmark, a harmonized multimodal dataset constructed through dense vector-space semantic linkage between quantitative profiles from the Center for Food Safety database and qualitative NOVA tiers from Open Food Facts. This benchmark addresses a 75.0% metadata sparsity deficit identified in legacy repositories. Results In experimental evaluations on the Nutrition-NOVA benchmark, the baseline Qwen-VL-Max architecture achieved an adjacent accuracy of 77.7%. Furthermore, enforcing schema modularity enabled complete plug-and-play backend replaceability between commercial cloud application programming interfaces (APIs) and private, on-premises open-weight models without requiring architectural retraining. Discussion The proposed framework establishes an efficient, safety-first screening tool for digital healthcare decision support. By isolating qualitative LLM reasoning from visual perceptual noise and database metadata sparsity, the system successfully bridges the gap between intuitive meal perception and point-of-care dietary risk triage, offering a non-invasive and scalable solution for automated dietary auditing and longitudinal population health monitoring.",
+    "url": "https://doi.org/10.3389/fnut.2026.1970182",
+    "published": "2026-10-26",
+    "doi": "10.3389/fnut.2026.1970182",
+    "journal": "Frontiers in Nutrition",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "reasoning",
+      "benchmark",
+      "evaluation",
+      "multimodal"
+    ],
+    "summary_zh": "Background Automated dietary assessment increasingly struggles to evaluate industrial food processing levels, revealing a systemic gap between the visual presentation of meals and their underlying ultra-processed food composition. Although existing dietary monitoring tools can effectively track caloric and macronutrient intake, they lack the qualitative processing assessments required to identify …",
+    "highlight": "命中: large language model, llm, language model, reasoning, benchmark"
+  },
+  {
+    "id": "openalex:W7223655927",
+    "source": "openalex",
+    "title": "Integrated Governance of Probabilistic AI and Deterministic Physical Layers in Next-Generation Cyber-Physical Systems: Sub-12.5 ms Control Barrier Optimization, Post-Quantum Cryptographic Sovereignty, Room-Temperature Quantum-Spintronic Infrastructure, and Asymmetric Intellectual Property Defense",
+    "authors": [
+      "Yoko(洋子) Hasebe(長谷部)"
+    ],
+    "abstract": "The rapid deployment of probabilistic artificial intelligence—spanning Large Language Models (LLMs), Vision-Language Models (VLMs), and foundation-scale Artificial General Intelligence (AGI) reasoning cores—into safety-critical Cyber-Physical Systems (CPS) introduces an existential structural vulnerability. Because autoregressive and diffusion-based foundation models rely on stochastic sampling within high-dimensional discrete latent spaces, connecting their outputs directly to continuous, nonlinear physical actuators invites catastrophic hard hazards, including kinetic collisions in Autonomous Trajectory and Collision Avoidance Systems (ATCS) for orbital space debris and thermal or mechanical runaway in robotic smart kitchens. This monograph establishes a unified, four-pillar master architecture that reconciles probabilistic AI orchestration with deterministic physical-layer safety, cryptographic data sovereignty, room-temperature thermodynamic sustainability, and transnational intellectual property (IP) defense. First, we formulate a hierarchical control decomposition combining a high-level LLM orchestrator with a low-level deterministic supervisor governed by Control Barrier Functions (CBFs), Higher-Order CBFs (HOCBFs), and Hardware-in-the-Loop Optimization (HITLO) executing Quadratic Programs (CBF-QP) on edge FPGAs within a strict <12.5 ms real-time deadline, fortified by a step-function penalty ($\\Phi = \\infty$) that triggers immediate rejection upon secondary risk ($f_3 > 0.05$) detection. Second, we specify an edge data-sovereignty engine integrating Multi-path Delay Commutator (MDC) pipelined ML-KEM-768 post-quantum cryptography, Residue Number System (RNS) side-channel masking, a topologically unidirectional Asymmetric Physical-Logical Gateway (PHOENIX_BRIDGE/PHOENIX_ROUTER) that physically blocks malicious backpropagation, and a Hardware Root of Trust (HRoT) Quantum Audit Record (QAR) anchored over the 64-bit Goldilocks prime field $\\mathbb{F}_p$ ($p = 2^{64}-2^{32}+1$). Third, we resolve the centralized data center Free Cash Flow (FCF) \"Dead Cross\" by introducing a \"Subtractive Infrastructure\" operating entirely at ambient room temperature (300 K) via Topological Insulator Spin-Orbit Torque (TI-SOT) spintronic logic and Dicke-model superabsorptive ($\\propto \\sqrt{N}$) organic exciton quantum batteries. Fourth, we construct an absolute IP defense doctrine integrating QAR prior-invention timestamping, Uniform Trade Secrets Act (UTSA) physical anti-reverse-engineering gates, and Article VIII of the Outer Space Treaty to defeat hyperscale \"clean-room\" misappropriation and enforce ex-post licensing via cryptographic watermarks.",
+    "url": "https://doi.org/10.5281/zenodo.23653797",
+    "published": "2026-10-26",
+    "doi": "10.5281/zenodo.23653797",
+    "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+    "journal_tier": 3,
+    "journal_rank": null,
+    "score": 14,
+    "matched": [
+      "large language model",
+      "llm",
+      "language model",
+      "foundation model",
+      "reasoning"
+    ],
+    "summary_zh": "The rapid deployment of probabilistic artificial intelligence—spanning Large Language Models (LLMs), Vision-Language Models (VLMs), and foundation-scale Artificial General Intelligence (AGI) reasoning cores—into safety-critical Cyber-Physical Systems (CPS) introduces an existential structural vulnerability. Because autoregressive and diffusion-based foundation models rely on stochastic sampling wi…",
+    "highlight": "命中: large language model, llm, language model, foundation model, reasoning"
+  }
+]
